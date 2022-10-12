@@ -11,10 +11,14 @@ int priority(char op)
 {
     if (op == '(')
         return 1;
-    if (op == '+' || op == '-')
+    if (op == '~')
         return 2;
-    if (op == '*' || op == '/')
+    if (op == '+')
         return 3;
+    if (op == '*')
+        return 4;
+    if (op == '>')
+        return 4;
 }
 
 // Create a stack to keep track of operators
@@ -76,7 +80,7 @@ void inFixToPreFix(char *input)
         input[strlen(input) - i - 1] = tempChar;
     }
 
-    printf("%s", input);
+    // printf("%s", input);
 
     // Take a temporary variable to the first character of the input
     char temp;
@@ -104,6 +108,8 @@ void inFixToPreFix(char *input)
                 }
                 else if (temp == '(')
                     stackPush('(');
+                // Even though we aren't actually considering ( for pushing
+                // it matters for the next one coming on to the stack
                 else if (priority(stack[top]) > priority(temp))
                 {
                     // Basically means priority of element on stack is higher

@@ -31,7 +31,7 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
     // Start an infinite loop to go through all the letters
     while (1)
     {
-        char *temp = NULL;
+        char *currentLocation = NULL;
         if (*root == NULL)
         {
             // Print statement to check how many nodes are being created
@@ -54,11 +54,18 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
                 // Check if it's an alphabet, if it is return it directly
                 return start;
             }
+            if(*start == '~'){
+                // If the operator is negation
+                // We should not go left but rather only go right
+                // So we directly go right instead of considering left
+                currentLocation = convertPreOrderToTree(&(*root)->right, start + 1);
+                return currentLocation;
+            }
             // Start with the left subtree
-            temp = convertPreOrderToTree(&(*root)->left, start + 1);
+            currentLocation = convertPreOrderToTree(&(*root)->left, start + 1);
             // Start with the right subtree
-            temp = convertPreOrderToTree(&(*root)->right, temp + 1);
-            return temp;
+            currentLocation = convertPreOrderToTree(&(*root)->right, currentLocation + 1);
+            return currentLocation;
         }
     }
 }
@@ -70,10 +77,19 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
 // current node and then goes to the right node again
 // using simple recursion we get the following function
 
+//Make a Global Variable
+//to store the number of alphabets
+//We are making this because we need 
+//to create an array of inputs and take from user
+
+int noOfCharacters = 0;
+
 void printInOrder(TreeNode *root)
 {
     if (root == NULL)
         return;
+    //A new statement to figure out the number of characters
+    if(isalpha(root->val)) noOfCharacters++;
     // Goes to the left sub tree
     printInOrder(root->left);
     // Prints current value
@@ -102,6 +118,37 @@ int maxHeightOfParseTree(TreeNode *root)
     int leftSubTreeHeight = maxHeightOfParseTree(root->left);
     int rightSubTreeHeight = maxHeightOfParseTree(root->right);
     return max(leftSubTreeHeight, rightSubTreeHeight) + 1;
+}
+
+// Task 5:
+// Evaluating the truth value of propositional logic formula in a bottoms up fashion
+int recursiveTruthEvaluator(char operation, TreeNode* left, TreeNode* right){
+    int leftVal, rightVal;
+    if(!isalpha(left->val)){
+        leftVal = recursiveTruthEvaluator(left->val, left->left, left->right);
+    }
+    if(!isalpha(right->val)){
+        rightVal = recursiveTruthEvaluator(right->val, right->left, right->right);
+    }
+    switch(operation){
+        case '~':
+            return !(right->val);
+        case '+':
+            return ((left->val) | (right->val));
+        case '*':
+            return ((left->val) & (right->val));
+        case '>':
+            return ((!(left->val)) | (right->val));
+    }
+}
+
+int findInputsForTruthEvaluator(){
+    int inputs[noOfCharacters];
+    for(int i=0; i<noOfCharacters; i++){
+        printf("Enter Truth Value %d: ", i);
+        scanf("%d", &inputs[i]);
+    }
+    
 }
 
 int main()
