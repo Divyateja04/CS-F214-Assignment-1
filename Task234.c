@@ -54,7 +54,8 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
                 // Check if it's an alphabet, if it is return it directly
                 return start;
             }
-            if(*start == '~'){
+            if (*start == '~')
+            {
                 // If the operator is negation
                 // We should not go left but rather only go right
                 // So we directly go right instead of considering left
@@ -77,10 +78,10 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
 // current node and then goes to the right node again
 // using simple recursion we get the following function
 
-//Make a Global Variable
-//to store the number of alphabets
-//We are making this because we need 
-//to create an array of inputs and take from user
+// Make a Global Variable
+// to store the number of alphabets
+// We are making this because we need
+// to create an array of inputs and take from user
 
 int noOfCharacters = 0;
 
@@ -88,8 +89,9 @@ void printInOrder(TreeNode *root)
 {
     if (root == NULL)
         return;
-    //A new statement to figure out the number of characters
-    if(isalpha(root->val)) noOfCharacters++;
+    // A new statement to figure out the number of characters
+    if (isalpha(root->val))
+        noOfCharacters++;
     // Goes to the left sub tree
     printInOrder(root->left);
     // Prints current value
@@ -122,33 +124,44 @@ int maxHeightOfParseTree(TreeNode *root)
 
 // Task 5:
 // Evaluating the truth value of propositional logic formula in a bottoms up fashion
-int recursiveTruthEvaluator(char operation, TreeNode* left, TreeNode* right){
+int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
+{
+    // initializing variables for left sub tree and right sub tree
     int leftVal, rightVal;
-    if(!isalpha(left->val)){
+    // If left is not alphabet call the function recursively
+    if (!isalpha(left->val))
+    {
         leftVal = recursiveTruthEvaluator(left->val, left->left, left->right);
     }
-    if(!isalpha(right->val)){
+    // If right is not alphabet call the function recursively
+    if (!isalpha(right->val))
+    {
         rightVal = recursiveTruthEvaluator(right->val, right->left, right->right);
     }
-    switch(operation){
-        case '~':
-            return !(right->val);
-        case '+':
-            return ((left->val) | (right->val));
-        case '*':
-            return ((left->val) & (right->val));
-        case '>':
-            return ((!(left->val)) | (right->val));
+    // if both are alphabets, do the operation
+    switch (operation)
+    {
+    case '~':
+        return !(right->val);
+    case '+':
+        return ((left->val) | (right->val));
+    case '*':
+        return ((left->val) & (right->val));
+    case '>':
+        return ((!(left->val)) | (right->val));
     }
 }
 
-int findInputsForTruthEvaluator(){
+// We are creating another function because we need to take inputs and we
+// can't take them directly due to the fact that input is variable
+int findInputsForTruthEvaluator()
+{
     int inputs[noOfCharacters];
-    for(int i=0; i<noOfCharacters; i++){
+    for (int i = 0; i < noOfCharacters; i++)
+    {
         printf("Enter Truth Value %d: ", i);
         scanf("%d", &inputs[i]);
     }
-    
 }
 
 int main()
@@ -169,4 +182,6 @@ int main()
 
     printf("\nThe height of the parse Tree is: ");
     printf("%d", maxHeightOfParseTree(root));
+
+    printf("\nThe number of inputs we need is: %d", noOfCharacters);
 }
