@@ -21,7 +21,7 @@ int calcMax(int a, int b) { return a > b ? a : b; }
 
 // Task 1: To convert infix to preorder
 // First we make the helper functions as well
-// Make a switch statement for precedence of operators
+// Make a if-else function for precedence of operators
 int priority(char op)
 {
     if (op == '(')
@@ -34,6 +34,7 @@ int priority(char op)
         return 4;
     if (op == '>')
         return 4;
+    return 0;
 }
 
 // Create a stack to keep track of operators
@@ -330,9 +331,12 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
         return ((leftVal) & (rightVal));
     case '>':
         printf("\n::>Performing >");
-        return (!(leftVal) | (rightVal));
+        return ((!(leftVal)) | (rightVal));
     }
 }
+
+// Task 6
+// https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8
 
 int main()
 {
