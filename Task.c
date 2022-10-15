@@ -174,10 +174,14 @@ void inFixToPreFix(char *input)
 char *convertPreOrderToTree(TreeNode **root, char *start)
 {
     // Print the starting characters to check the flow of the code
-    printf("\nCurrent Character %c: ", *start);
+    // printf("\nCurrent Character %c: ", *start);
+    // Was there just to check if the code is working or not :)
+
     // If Character is \0 return \0
     if (*start == '\0')
         return '\0';
+
+
     // Start an infinite loop to go through all the letters
     while (1)
     {
@@ -185,7 +189,9 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
         if (*root == NULL)
         {
             // Print statement to check how many nodes are being created
-            printf("\nNode doesn't exist, creating new Node");
+            // Just to check if it's actually creating nodes
+            // printf("\nNode doesn't exist, creating new Node");
+
             // Create a new TreeNode to store these variables
             // Initialize left and right to null initially
             TreeNode *newTreeNode = (TreeNode *)malloc(sizeof(TreeNode));
@@ -320,17 +326,19 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
     // Switch case taking care of all the possible operations
     switch (operation)
     {
+    // Removed all printfs because we just added them 
+    // to check if the cases are actually working or not
     case '~':
-        printf("\n::>Performing ~");
+        // printf("\n::>Performing ~");
         return !(rightVal);
     case '+':
-        printf("\n::>Performing +");
+        // printf("\n::>Performing +");
         return ((leftVal) | (rightVal));
     case '*':
-        printf("\n::>Performing *");
+        // printf("\n::>Performing *");
         return ((leftVal) & (rightVal));
     case '>':
-        printf("\n::>Performing >");
+        // printf("\n::>Performing >");
         return ((!(leftVal)) | (rightVal));
     }
 }
