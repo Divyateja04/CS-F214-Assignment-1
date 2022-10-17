@@ -3,10 +3,16 @@
 #include <string.h>
 #include <ctype.h>
 
-// Define a constant to take care of max limit of input
+/**
+ * @brief Define a constant to take care of max limit of input
+ * 
+ */
 #define max 100
 
-// Creating a structure with left and right leaves
+/**
+ * @brief Creating a structure with left and right leaves
+ * 
+ */ 
 typedef struct TreeNode
 {
     char val;
@@ -14,14 +20,19 @@ typedef struct TreeNode
     struct TreeNode *right;
 } TreeNode;
 
-// Helper Function: max()
-// A function to find the max of 2 numbers
+/**
+ * @brief Helper Function: max() A function to find the max of 2 numbers
+ *
+ */
 int calcMax(int a, int b) { return a > b ? a : b; }
 
-
 // Task 1: To convert infix to preorder
-// First we make the helper functions as well
-// Make a if-else function for precedence of operators
+/**
+ * @brief Make a if-else function for precedence of operators
+ *
+ * @param op
+ * @return int
+ */
 int priority(char op)
 {
     if (op == '(')
@@ -37,20 +48,30 @@ int priority(char op)
     return 0;
 }
 
-// Create a stack to keep track of operators
+/**
+ * @brief Create a stack to keep track of operators
+ * 
+ */
 char stack[max];
 int top = -1;
 
-// Function to push onto stack
-void stackPush(char i)
+/**
+ * @brief Function to push onto stack
+ * 
+ * @param val
+ */
+void stackPush(char val)
 {
-    stack[++top] = i;
+    stack[++top] = val;
 }
 
-// Function to pop from the stack
+/**
+ * @brief Function to pop from the stack. Exception Case where we might have an empty stack
+ * 
+ * @return char 
+ */
 char stackPop()
 {
-    // Exception Case where we might have an empty stack
     if (top == -1)
     {
         printf("Empty Stack");
@@ -59,22 +80,29 @@ char stackPop()
         return stack[top--];
 }
 
-// A function to check if stack is empty or not
+/**
+ * @brief A function to check if stack is empty or not
+ * 
+ * @return int 
+ */
 int stackIsEmpty()
 {
     return top == -1;
 }
 
+/**
+ * @brief Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
+ *  Also we cannot have 2 same precedence operators together
+ *  So we have to keep popping and adding into output
+ *  If we have a closing bracket we have to pop
+ * 
+ * @param input 
+ */
 void inFixToPreFix(char *input)
 {
     // Create a Variable to store the output
     char output[max];
     int outputCounter = 0;
-
-    // Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
-    // Also we cannot have 2 same precedence operators together
-    // So we have to keep popping and adding into output
-    // If we have a closing bracket we have to pop
 
     // But again through this method we get Postfix since
     // so we reverse the string inorder to get the reverse of preorder notation
@@ -164,13 +192,17 @@ void inFixToPreFix(char *input)
     }
 }
 
-
 // Task 2: To convert prefix to tree
-// We observe that from the prefix notation, we can directly get tree
-// If we observe, it starts with an operator and goes on until it gets another operator
-// Let us try if we can get tree from here
-// References : https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
-
+/**
+ * @brief We observe that from the prefix notation, we can directly get tree
+ *  If we observe, it starts with an operator and goes on until it gets another operator
+ *  Let us try if we can get tree from here
+ *  References : https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
+ *
+ * @param root
+ * @param start
+ * @return char*
+ */
 char *convertPreOrderToTree(TreeNode **root, char *start)
 {
     // Print the starting characters to check the flow of the code
@@ -180,7 +212,6 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
     // If Character is \0 return \0
     if (*start == '\0')
         return '\0';
-
 
     // Start an infinite loop to go through all the letters
     while (1)
@@ -228,12 +259,6 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
 }
 
 // Task 3:
-// Function to traverse through the tree in order
-// We know that in order means first
-// the pointer goes to the left node, then prints the
-// current node and then goes to the right node again
-// using simple recursion we get the following function
-
 // Make a Global Variable
 // to store the number of alphabets
 // We are making this because we need
@@ -241,6 +266,14 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
 
 int noOfCharacters = 0;
 
+/**
+ * @brief Function to traverse through the tree in order. 
+ * We know that in order means first the pointer goes to the left node,
+ * then prints the current node and then goes to the right node again 
+ * using simple recursion we get the following function
+ * 
+ * @param root 
+ */
 void printInOrder(TreeNode *root)
 {
     if (root == NULL)
@@ -257,18 +290,23 @@ void printInOrder(TreeNode *root)
 }
 
 // Task 4:
-// We need to find max height of tree
-// We can use Depth First Search for this, i.e. we keep traversing
-// lower into the tree until we find an end
-// and we take max of this
-// For example, let's say we have
-//     4
-//   3   5
-//  2     6
-// 1
-// Here we start from 4, then we say that height is max(leftSubTreeHeight, rightSubTreeHeight) + 1
-// That extra 1 due to the current node itself
-// When we go to the left node, we get that it is max(leftSubTreeHeight, rightSubTreeHeight) + 1 again
+// 
+/**
+ * @brief We need to find max height of tree. We can use Depth First Search for this,
+ *  i.e. we keep traversing lower into the tree until we find an end and
+ *  we take max of this
+ *  For example, let's say we have
+ *      4
+ *    3   5
+ *   2     6
+ *  1
+ *  Here we start from 4, then we say that height is max(leftSubTreeHeight, rightSubTreeHeight) + 1
+ *  That extra 1 due to the current node itself
+ *  When we go to the left node, we get that it is max(leftSubTreeHeight, rightSubTreeHeight) + 1 again
+ * 
+ * @param root 
+ * @return int 
+ */
 int maxHeightOfParseTree(TreeNode *root)
 {
     if (root == NULL)
@@ -279,7 +317,14 @@ int maxHeightOfParseTree(TreeNode *root)
 }
 
 // Task 5:
-// Evaluating the truth value of propositional logic formula in a bottoms up fashion
+/**
+ * @brief Evaluating the truth value of propositional logic formula in a bottoms up fashion
+ * 
+ * @param operation 
+ * @param left 
+ * @param right 
+ * @return int 
+ */
 int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 {
     // initializing variables for left sub tree and right sub tree
@@ -326,7 +371,7 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
     // Switch case taking care of all the possible operations
     switch (operation)
     {
-    // Removed all printfs because we just added them 
+    // Removed all printfs because we just added them
     // to check if the cases are actually working or not
     case '~':
         // printf("\n::>Performing ~");
@@ -345,7 +390,14 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 
 // Task 6
 // https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8
-
+/**
+ * @brief Takes input from user
+ * Creates a string for the input
+ * Create a root and call the function 
+ * which returns inorder notation
+ * 
+ * @return int 
+ */
 int main()
 {
     // Take input as infix from user
