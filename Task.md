@@ -1,5 +1,28 @@
 # CS F214: Logic in CS Assignment 1
 
+## Members
+- Divyateja Pasupuleti 2021A7PS0075H
+- Kumarasamy Chelilah 2021A7PS0096H
+- Manan Gupta 2021A7PS2091H
+- Harsh Rachalwar 2021A7PS0200H
+  
+---
+- [CS F214: Logic in CS Assignment 1](#cs-f214-logic-in-cs-assignment-1)
+  - [Members](#members)
+  - [Task 0: Initializing all the constants and libraries](#task-0-initializing-all-the-constants-and-libraries)
+    - [Importing libraries for the Code](#importing-libraries-for-the-code)
+    - [Define a constant to take care of max limit of input](#define-a-constant-to-take-care-of-max-limit-of-input)
+    - [Creating a structure with left and right leaves](#creating-a-structure-with-left-and-right-leaves)
+    - [Helper Function: max() A function to find the max of 2 numbers](#helper-function-max-a-function-to-find-the-max-of-2-numbers)
+  - [Task 1: To convert infix to preorder](#task-1-to-convert-infix-to-preorder)
+    - [Create a stack to keep track of operators](#create-a-stack-to-keep-track-of-operators)
+    - [Function to convert Infix to Prefix](#function-to-convert-infix-to-prefix)
+  - [Task 2: To convert prefix to tree](#task-2-to-convert-prefix-to-tree)
+  - [Task 3: Function to traverse through the tree in order](#task-3-function-to-traverse-through-the-tree-in-order)
+  - [Task 4: Height of the Parse Tree](#task-4-height-of-the-parse-tree)
+  - [Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion](#task-5-evaluating-the-truth-value-of-propositional-logic-formula-in-a-bottoms-up-fashion)
+  - [Task 6: References Used](#task-6-references-used)
+
 ## Task 0: Initializing all the constants and libraries
 ### Importing libraries for the Code
 ```c
@@ -8,7 +31,6 @@
 #include <string.h>
 #include <ctype.h>
 ```
-
 
 ### Define a constant to take care of max limit of input
 ```c
@@ -25,9 +47,8 @@ typedef struct TreeNode
 } TreeNode;
 ```
 
-### Helper Function: max()
+### Helper Function: max() A function to find the max of 2 numbers
 ```c
-// A function to find the max of 2 numbers
 int calcMax(int a, int b) { return a > b ? a : b; }
 ```
 
@@ -62,10 +83,9 @@ void stackPush(char i)
     stack[++top] = i;
 }
 
-// Function to pop from the stack
+// Function to pop from the stack, Exception Case where we might have an empty stack
 char stackPop()
 {
-    // Exception Case where we might have an empty stack
     if (top == -1)
     {
         printf("Empty Stack");
@@ -82,22 +102,22 @@ int stackIsEmpty()
 ```
 
 ### Function to convert Infix to Prefix
+    Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
+    Also we cannot have 2 same precedence operators together
+    So we have to keep popping and adding into output
+    If we have a closing bracket we have to pop
+    But again through this method we get Postfix 
+    so we reverse the string inorder to get the reverse of preorder notation
+    First we replace ( with ) and ) with (
+    And in the end we reverse again
 ```c
 void inFixToPreFix(char *input)
 {
     // Create a Variable to store the output
     char output[max];
     int outputCounter = 0;
-
-    // Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
-    // Also we cannot have 2 same precedence operators together
-    // So we have to keep popping and adding into output
-    // If we have a closing bracket we have to pop
-
-    // But again through this method we get Postfix since
-    // so we reverse the string inorder to get the reverse of preorder notation
-    // First we replace ( with ) and ) with (
-    // And in the end we reverse again
+ 
+    //Reversing input Step1: Exchange Brackets
     for (int i = 0; i < strlen(input); i++)
     {
         if (input[i] == '(')
@@ -190,14 +210,14 @@ void inFixToPreFix(char *input)
 - References : https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
 
 ```c
-
 char *convertPreOrderToTree(TreeNode **root, char *start)
 {
     // Print the starting characters to check the flow of the code
-    printf("\nCurrent Character %c: ", *start);
+    // printf("\nCurrent Character %c: ", *start);
     // If Character is \0 return \0
     if (*start == '\0')
         return '\0';
+
     // Start an infinite loop to go through all the letters
     while (1)
     {
@@ -241,18 +261,18 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
     }
 }
 ```
+
+
 ## Task 3: Function to traverse through the tree in order
 - We know that in order means first
 - the pointer goes to the left node, then prints the
 - current node and then goes to the right node again
 - using simple recursion we get the following function
+- Make a Global Variable to store the number of alphabets
+- We are making this because we need
+- to create an array of inputs and take from user
+
 ```c
-
-// Make a Global Variable
-// to store the number of alphabets
-// We are making this because we need
-// to create an array of inputs and take from user
-
 int noOfCharacters = 0;
 
 void printInOrder(TreeNode *root)
@@ -269,20 +289,25 @@ void printInOrder(TreeNode *root)
     // Goes to the right sub tree
     printInOrder(root->right);
 }
-
-// Task 4:
-// We need to find max height of tree
-// We can use Depth First Search for this, i.e. we keep traversing
-// lower into the tree until we find an end
-// and we take max of this
-// For example, let's say we have
-//     4
-//   3   5
-//  2     6
-// 1
-// Here we start from 4, then we say that height is max(leftSubTreeHeight, rightSubTreeHeight) + 1
-// That extra 1 due to the current node itself
-// When we go to the left node, we get that it is max(leftSubTreeHeight, rightSubTreeHeight) + 1 again
+```
+## Task 4: Height of the Parse Tree 
+```c
+/**
+ * @brief We need to find max height of tree. We can use Depth First Search for this,
+ *  i.e. we keep traversing lower into the tree until we find an end and
+ *  we take max of this
+ *  For example, let's say we have
+ *      4
+ *    3   5
+ *   2     6
+ *  1
+ *  Here we start from 4, then we say that height is max(leftSubTreeHeight, rightSubTreeHeight) + 1
+ *  That extra 1 due to the current node itself
+ *  When we go to the left node, we get that it is max(leftSubTreeHeight, rightSubTreeHeight) + 1 again
+ * 
+ * @param root 
+ * @return int 
+ */
 int maxHeightOfParseTree(TreeNode *root)
 {
     if (root == NULL)
@@ -357,9 +382,10 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
     }
 }
 ```
-## Task 6: [References Used](https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8)
-```c
 
+## Task 6: [References Used](https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8)
+
+```c
 int main()
 {
     // Take input as infix from user

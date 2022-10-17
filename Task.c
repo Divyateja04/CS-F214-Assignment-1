@@ -92,9 +92,13 @@ int stackIsEmpty()
 
 /**
  * @brief Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
- *  Also we cannot have 2 same precedence operators together
- *  So we have to keep popping and adding into output
- *  If we have a closing bracket we have to pop
+ * Also we cannot have 2 same precedence operators together
+ * So we have to keep popping and adding into output
+ * If we have a closing bracket we have to pop
+ * But again through this method we get Postfix 
+ * so we reverse the string inorder to get the reverse of preorder notation
+ * First we replace ( with ) and ) with (
+ * And in the end we reverse again
  * 
  * @param input 
  */
@@ -104,10 +108,7 @@ void inFixToPreFix(char *input)
     char output[max];
     int outputCounter = 0;
 
-    // But again through this method we get Postfix since
-    // so we reverse the string inorder to get the reverse of preorder notation
-    // First we replace ( with ) and ) with (
-    // And in the end we reverse again
+    //Reversing input Step1: Exchange Brackets
     for (int i = 0; i < strlen(input); i++)
     {
         if (input[i] == '(')
@@ -290,7 +291,6 @@ void printInOrder(TreeNode *root)
 }
 
 // Task 4:
-// 
 /**
  * @brief We need to find max height of tree. We can use Depth First Search for this,
  *  i.e. we keep traversing lower into the tree until we find an end and
