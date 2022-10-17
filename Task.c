@@ -1,18 +1,26 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include <stdio.h>  // Using for printf, scanf etc.
+#include <stdlib.h> // For malloc, calloc
+#include <string.h> // Only for length of the string
+#include <ctype.h> // Used for isalpha function
+
+/**
+ * @brief We chose to use C because of the fact that
+ * There is no proper implementation in C before this and we thought
+ * it would be a good learning experience for us if we use our CP knowledge
+ * and put it to use here instead of learning C++ again and shifting
+ * to another language
+ */
 
 /**
  * @brief Define a constant to take care of max limit of input
- * 
+ *
  */
 #define max 100
 
 /**
  * @brief Creating a structure with left and right leaves
- * 
- */ 
+ *
+ */
 typedef struct TreeNode
 {
     char val;
@@ -50,14 +58,14 @@ int priority(char op)
 
 /**
  * @brief Create a stack to keep track of operators
- * 
+ *
  */
 char stack[max];
 int top = -1;
 
 /**
  * @brief Function to push onto stack
- * 
+ *
  * @param val
  */
 void stackPush(char val)
@@ -67,8 +75,8 @@ void stackPush(char val)
 
 /**
  * @brief Function to pop from the stack. Exception Case where we might have an empty stack
- * 
- * @return char 
+ *
+ * @return char
  */
 char stackPop()
 {
@@ -82,8 +90,8 @@ char stackPop()
 
 /**
  * @brief A function to check if stack is empty or not
- * 
- * @return int 
+ *
+ * @return int
  */
 int stackIsEmpty()
 {
@@ -95,12 +103,12 @@ int stackIsEmpty()
  * Also we cannot have 2 same precedence operators together
  * So we have to keep popping and adding into output
  * If we have a closing bracket we have to pop
- * But again through this method we get Postfix 
+ * But again through this method we get Postfix
  * so we reverse the string inorder to get the reverse of preorder notation
  * First we replace ( with ) and ) with (
  * And in the end we reverse again
- * 
- * @param input 
+ *
+ * @param input
  */
 void inFixToPreFix(char *input)
 {
@@ -108,7 +116,7 @@ void inFixToPreFix(char *input)
     char output[max];
     int outputCounter = 0;
 
-    //Reversing input Step1: Exchange Brackets
+    // Reversing input Step1: Exchange Brackets
     for (int i = 0; i < strlen(input); i++)
     {
         if (input[i] == '(')
@@ -268,12 +276,12 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
 int noOfCharacters = 0;
 
 /**
- * @brief Function to traverse through the tree in order. 
+ * @brief Function to traverse through the tree in order.
  * We know that in order means first the pointer goes to the left node,
- * then prints the current node and then goes to the right node again 
+ * then prints the current node and then goes to the right node again
  * using simple recursion we get the following function
- * 
- * @param root 
+ *
+ * @param root
  */
 void printInOrder(TreeNode *root)
 {
@@ -303,9 +311,9 @@ void printInOrder(TreeNode *root)
  *  Here we start from 4, then we say that height is max(leftSubTreeHeight, rightSubTreeHeight) + 1
  *  That extra 1 due to the current node itself
  *  When we go to the left node, we get that it is max(leftSubTreeHeight, rightSubTreeHeight) + 1 again
- * 
- * @param root 
- * @return int 
+ *
+ * @param root
+ * @return int
  */
 int maxHeightOfParseTree(TreeNode *root)
 {
@@ -319,11 +327,11 @@ int maxHeightOfParseTree(TreeNode *root)
 // Task 5:
 /**
  * @brief Evaluating the truth value of propositional logic formula in a bottoms up fashion
- * 
- * @param operation 
- * @param left 
- * @param right 
- * @return int 
+ *
+ * @param operation
+ * @param left
+ * @param right
+ * @return int
  */
 int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 {
@@ -393,10 +401,10 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 /**
  * @brief Takes input from user
  * Creates a string for the input
- * Create a root and call the function 
+ * Create a root and call the function
  * which returns inorder notation
- * 
- * @return int 
+ *
+ * @return int
  */
 int main()
 {
