@@ -1,4 +1,4 @@
-# CS F214: Logic in CS Assignment 1
+# Code with Comments
 
 ## Members
 - Divyateja Pasupuleti 2021A7PS0075H
@@ -7,29 +7,14 @@
 - Harsh Rachalwar 2021A7PS0200H
   
 ---
-- [CS F214: Logic in CS Assignment 1](#cs-f214-logic-in-cs-assignment-1)
-  - [Members](#members)
-  - [Task 0: Initializing all the constants and libraries](#task-0-initializing-all-the-constants-and-libraries)
-    - [Importing libraries for the Code](#importing-libraries-for-the-code)
-    - [Define a constant to take care of max limit of input](#define-a-constant-to-take-care-of-max-limit-of-input)
-    - [Creating a structure with left and right leaves](#creating-a-structure-with-left-and-right-leaves)
-    - [Helper Function: max() A function to find the max of 2 numbers](#helper-function-max-a-function-to-find-the-max-of-2-numbers)
-  - [Task 1: To convert infix to preorder](#task-1-to-convert-infix-to-preorder)
-    - [Create a stack to keep track of operators](#create-a-stack-to-keep-track-of-operators)
-    - [Function to convert Infix to Prefix](#function-to-convert-infix-to-prefix)
-  - [Task 2: To convert prefix to tree](#task-2-to-convert-prefix-to-tree)
-  - [Task 3: Function to traverse through the tree in order](#task-3-function-to-traverse-through-the-tree-in-order)
-  - [Task 4: Height of the Parse Tree](#task-4-height-of-the-parse-tree)
-  - [Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion](#task-5-evaluating-the-truth-value-of-propositional-logic-formula-in-a-bottoms-up-fashion)
-  - [Task 6: References Used](#task-6-references-used)
 
 ## Task 0: Initializing all the constants and libraries
 ### Importing libraries for the Code
 ```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include <stdio.h>  // Using for printf, scanf etc.
+#include <stdlib.h> // For malloc, calloc
+#include <string.h> // Only for length of the string
+#include <ctype.h> // Used for isalpha function
 ```
 
 ### Define a constant to take care of max limit of input
@@ -368,22 +353,23 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
     switch (operation)
     {
     case '~':
-        printf("\n::>Performing ~");
+        // printf("\n::>Performing ~");
         return !(rightVal);
     case '+':
-        printf("\n::>Performing +");
+        // printf("\n::>Performing +");
         return ((leftVal) | (rightVal));
     case '*':
-        printf("\n::>Performing *");
+        // printf("\n::>Performing *");
         return ((leftVal) & (rightVal));
     case '>':
-        printf("\n::>Performing >");
+        // printf("\n::>Performing >");
         return ((!(leftVal)) | (rightVal));
     }
 }
 ```
 
-## Task 6: [References Used](https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8)
+## Task 6: 
+References Used: (https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8)
 
 ```c
 int main()

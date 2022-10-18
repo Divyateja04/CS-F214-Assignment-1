@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['left_0',['left',['../struct_tree_node.html#a99fb5e0be96ed75527d53c3747f93c2d',1,'TreeNode']]]
+  ['infixtoprefix_0',['inFixToPreFix',['../_task_8c.html#a42c6cde842c5416b53b9a0211894e764',1,'Task.c']]]
 ];

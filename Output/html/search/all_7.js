@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['stack_0',['stack',['../_task_8c.html#ae24cff811e071e4fe46eff231506df71',1,'Task.c']]],
-  ['stackisempty_1',['stackIsEmpty',['../_task_8c.html#a328d06e919f031e5305bf079c3b1ec32',1,'Task.c']]],
-  ['stackpop_2',['stackPop',['../_task_8c.html#aed34a437ccad598623ff35ce06b759dc',1,'Task.c']]],
-  ['stackpush_3',['stackPush',['../_task_8c.html#aed61586067826b285a214c9643d2c796',1,'Task.c']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['recursivetruthevaluator_1',['recursiveTruthEvaluator',['../_task_8c.html#af8cfe1853f9906165524e57444d88f47',1,'Task.c']]],
+  ['right_2',['right',['../struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247',1,'TreeNode']]]
 ];

@@ -1,4 +1,4 @@
-# CS-F214-Assignment-1
+# Developer Readme
 - This was a project made for Logic in CS Course Assignment 1
 - Compile by using `gcc -Wall -pg Task.c -o Task.exe`
 - Then Run the exe
@@ -6,7 +6,7 @@
 - `gprof Task.exe gmon.out >> analysis.txt` Use this to get analysis
 - To graph this in points use gprof2dot and graph
 
-## GIT Commands
+## Basic Git Commands you might want to know to push onto this repository
 - `git pull`: to pull from remote
 - `git add .`: to add your files
 - `git commit -m "Message Goes here"`: Add Message for the commit
