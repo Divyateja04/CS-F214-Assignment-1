@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['developer_20readme_0',['Developer Readme',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['infixtoprefix_0',['inFixToPreFix',['../_task_8c.html#a42c6cde842c5416b53b9a0211894e764',1,'Task.c']]]
 ];

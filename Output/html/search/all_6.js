@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['printinorder_0',['printInOrder',['../_task_8c.html#a313ba20caa46358af4cc9e665ec9b532',1,'Task.c']]],
-  ['priority_1',['priority',['../_task_8c.html#a2b483497092966998b1335924dfa6442',1,'Task.c']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['recursivetruthevaluator_1',['recursiveTruthEvaluator',['../_task_8c.html#af8cfe1853f9906165524e57444d88f47',1,'Task.c']]],
+  ['right_2',['right',['../struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247',1,'TreeNode']]]
 ];

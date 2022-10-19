@@ -1,5 +1,432 @@
 
 \begin{DoxyItemize}
+\item Code Analysis
+\begin{DoxyItemize}
+\item Members
+\item Task 0\+: Initializing all the constants and libraries
+\begin{DoxyItemize}
+\item Importing libraries for the Code
+\item Define a constant to take care of max limit of input
+\item Creating a structure with left and right leaves
+\item Helper Function\+: max() A function to find the max of 2 numbers
+\end{DoxyItemize}
+\item Task 1\+: To convert infix to preorder
+\begin{DoxyItemize}
+\item Create a stack to keep track of operators
+\item Function to convert Infix to Prefix
+\end{DoxyItemize}
+\item Task 2\+: To convert prefix to tree
+\item Task 3\+: Function to traverse through the tree in order
+\item Task 4\+: Height of the Parse Tree
+\item Task 5\+: Evaluating the truth value of propositional logic formula in a bottoms up fashion
+\item Task 6
+\item Running the Code
+\item Basic Git Commands you might want to know to push onto this repository
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Members}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Divyateja Pasupuleti 2021A7\+PS0075H
+\item Kumarasamy Chelilah 2021A7\+PS0096H
+\item Manan Gupta 2021A7\+PS2091H
+\item Harsh Rachalwar 2021A7\+PS0200H
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Task 0\+: Initializing all the constants and libraries}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Importing libraries for the Code}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <stdio.h>}  \textcolor{comment}{// Using for printf, scanf etc.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <stdlib.h>} \textcolor{comment}{// For malloc, calloc}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <string.h>} \textcolor{comment}{// Only for length of the string}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <ctype.h>} \textcolor{comment}{// Used for isalpha function}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{Define a constant to take care of max limit of input}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define max 100}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{Creating a structure with left and right leaves}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_tree_node}{TreeNode}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}};}
+\DoxyCodeLine{    \textcolor{keyword}{struct }\mbox{\hyperlink{struct_tree_node}{TreeNode}} *\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}};}
+\DoxyCodeLine{    \textcolor{keyword}{struct }\mbox{\hyperlink{struct_tree_node}{TreeNode}} *\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}};}
+\DoxyCodeLine{\} \mbox{\hyperlink{struct_tree_node}{TreeNode}};}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{Helper Function\+: max() A function to find the max of 2 numbers}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_a8afd80be6cfb73e36bf48de6a8c1dd6c}{calcMax}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{int} b) \{ \textcolor{keywordflow}{return} a > b ? a : b; \}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{Task 1\+: To convert infix to preorder}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item First we make the helper functions as well
+\item Make a if-\/else function for precedence of operators 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_a2b483497092966998b1335924dfa6442}{priority}}(\textcolor{keywordtype}{char} op)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (op == \textcolor{charliteral}{'('})}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (op == \textcolor{charliteral}{'\string~'})}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (op == \textcolor{charliteral}{'+'})}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 3;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (op == \textcolor{charliteral}{'*'})}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 4;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (op == \textcolor{charliteral}{'>'})}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 4;}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{Create a stack to keep track of operators}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} \mbox{\hyperlink{_task_8c_ae24cff811e071e4fe46eff231506df71}{stack}}[\mbox{\hyperlink{_task_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}];}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} = -\/1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Function to push onto stack}}
+\DoxyCodeLine{\textcolor{keywordtype}{void} \mbox{\hyperlink{_task_8c_aed61586067826b285a214c9643d2c796}{stackPush}}(\textcolor{keywordtype}{char} i)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \mbox{\hyperlink{_task_8c_ae24cff811e071e4fe46eff231506df71}{stack}}[++\mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}] = i;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Function to pop from the stack, Exception Case where we might have an empty stack}}
+\DoxyCodeLine{\textcolor{keywordtype}{char} \mbox{\hyperlink{_task_8c_aed34a437ccad598623ff35ce06b759dc}{stackPop}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} == -\/1)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}Empty Stack"{}});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{else}}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \mbox{\hyperlink{_task_8c_ae24cff811e071e4fe46eff231506df71}{stack}}[\mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}-\/-\/];}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// A function to check if stack is empty or not}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_a328d06e919f031e5305bf079c3b1ec32}{stackIsEmpty}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} == -\/1;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsection{Function to convert Infix to Prefix}\label{md__r_e_a_d_m_e_autotoc_md10}
+Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we cannot have 2 same precedence operators together So we have to keep popping and adding into output If we have a closing bracket we have to pop But again through this method we get Postfix so we reverse the string inorder to get the reverse of preorder notation First we replace ( with ) and ) with ( And in the end we reverse again 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} \mbox{\hyperlink{_task_8c_a42c6cde842c5416b53b9a0211894e764}{inFixToPreFix}}(\textcolor{keywordtype}{char} *input)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{// Create a Variable to store the output}}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} output[\mbox{\hyperlink{_task_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}];}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} outputCounter = 0;}
+\DoxyCodeLine{ }
+\DoxyCodeLine{    \textcolor{comment}{//Reversing input Step1: Exchange Brackets}}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < strlen(input); i++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (input[i] == \textcolor{charliteral}{'('})}
+\DoxyCodeLine{            input[i] = \textcolor{charliteral}{')'};}
+\DoxyCodeLine{        \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (input[i] == \textcolor{charliteral}{')'})}
+\DoxyCodeLine{            input[i] = \textcolor{charliteral}{'('};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Here we are reversing full string}}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < strlen(input) / 2; i++)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordtype}{char} tempChar = input[i];}
+\DoxyCodeLine{        input[i] = input[strlen(input) -\/ i -\/ 1];}
+\DoxyCodeLine{        input[strlen(input) -\/ i -\/ 1] = tempChar;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Take a temporary variable to the first character of the input}}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} temp;}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} t = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Make a loop that goes through full input}}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} ((temp = input[t++]) != \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// Check if the character is operator or operand}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (!isalpha(temp))}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \textcolor{comment}{// Means it's an operator}}
+\DoxyCodeLine{            \textcolor{comment}{// Check if the top of stack has less or equal priority}}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (\mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} != -\/1)}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                \textcolor{keywordflow}{if} (temp == \textcolor{charliteral}{')'})}
+\DoxyCodeLine{                \{}
+\DoxyCodeLine{                    \textcolor{comment}{// We should check the case where we have a closing bracket coming}}
+\DoxyCodeLine{                    \textcolor{comment}{// Incases like this we have to pop until stack pops '('}}
+\DoxyCodeLine{                    \textcolor{keywordtype}{char} currentOperator;}
+\DoxyCodeLine{                    \textcolor{keywordflow}{while} ((currentOperator = \mbox{\hyperlink{_task_8c_aed34a437ccad598623ff35ce06b759dc}{stackPop}}()) != \textcolor{charliteral}{'('} \&\& !\mbox{\hyperlink{_task_8c_a328d06e919f031e5305bf079c3b1ec32}{stackIsEmpty}}())}
+\DoxyCodeLine{                    \{}
+\DoxyCodeLine{                        output[outputCounter++] = currentOperator;}
+\DoxyCodeLine{                    \}}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temp == \textcolor{charliteral}{'('})}
+\DoxyCodeLine{                    \mbox{\hyperlink{_task_8c_aed61586067826b285a214c9643d2c796}{stackPush}}(\textcolor{charliteral}{'('});}
+\DoxyCodeLine{                \textcolor{comment}{// Even though we aren't actually considering ( for pushing}}
+\DoxyCodeLine{                \textcolor{comment}{// it matters for the next one coming on to the stack}}
+\DoxyCodeLine{                \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_task_8c_a2b483497092966998b1335924dfa6442}{priority}}(\mbox{\hyperlink{_task_8c_ae24cff811e071e4fe46eff231506df71}{stack}}[\mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}]) > \mbox{\hyperlink{_task_8c_a2b483497092966998b1335924dfa6442}{priority}}(temp))}
+\DoxyCodeLine{                \{}
+\DoxyCodeLine{                    \textcolor{comment}{// Basically means priority of element on stack is higher}}
+\DoxyCodeLine{                    \textcolor{comment}{// Pop the top of the stack and add it to the output}}
+\DoxyCodeLine{                    output[outputCounter++] = \mbox{\hyperlink{_task_8c_aed34a437ccad598623ff35ce06b759dc}{stackPop}}();}
+\DoxyCodeLine{                    \mbox{\hyperlink{_task_8c_aed61586067826b285a214c9643d2c796}{stackPush}}(temp);}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{                \textcolor{keywordflow}{else}}
+\DoxyCodeLine{                \{}
+\DoxyCodeLine{                    \textcolor{comment}{// Here it means priority of element on stack is lower then the incoming one}}
+\DoxyCodeLine{                    \mbox{\hyperlink{_task_8c_aed61586067826b285a214c9643d2c796}{stackPush}}(temp);}
+\DoxyCodeLine{                \}}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{keywordflow}{else}}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                \textcolor{comment}{// Just push it on to the stack}}
+\DoxyCodeLine{                \mbox{\hyperlink{_task_8c_aed61586067826b285a214c9643d2c796}{stackPush}}(temp);}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \textcolor{comment}{// Means it's an operand i.e. Letter}}
+\DoxyCodeLine{            \textcolor{comment}{// Just push it on to the output}}
+\DoxyCodeLine{            output[outputCounter++] = temp;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// If there are still operators in the stack, they should be considered as well}}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} (\mbox{\hyperlink{_task_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} != -\/1)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        output[outputCounter++] = \mbox{\hyperlink{_task_8c_aed34a437ccad598623ff35ce06b759dc}{stackPop}}();}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}Output in PreOrder Notation: "{}});}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = outputCounter -\/ 1; i >= 0; i-\/-\/)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}\%c"{}}, output[i]);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{Task 2\+: To convert prefix to tree}\label{md__r_e_a_d_m_e_autotoc_md11}
+
+\begin{DoxyItemize}
+\item We observe that from the prefix notation, we can directly get tree
+\item If we observe, it starts with an operator and goes on until it gets another operator
+\item Let us try if we can get tree from here
+\item References \+: \href{https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/}{\texttt{ https\+://www.\+geeksforgeeks.\+org/building-\/expression-\/tree-\/from-\/prefix-\/expression/}}
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} *\mbox{\hyperlink{_task_8c_a361116e1fb6837a1384c240b3659df98}{convertPreOrderToTree}}(\mbox{\hyperlink{struct_tree_node}{TreeNode}} **root, \textcolor{keywordtype}{char} *start)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{// Print the starting characters to check the flow of the code}}
+\DoxyCodeLine{    \textcolor{comment}{// printf("{}\(\backslash\)nCurrent Character \%c: "{}, *start);}}
+\DoxyCodeLine{    \textcolor{comment}{// If Character is \(\backslash\)0 return \(\backslash\)0}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (*start == \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Start an infinite loop to go through all the letters}}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} (1)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordtype}{char} *currentLocation = NULL;}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (*root == NULL)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \textcolor{comment}{// Print statement to check how many nodes are being created}}
+\DoxyCodeLine{            printf(\textcolor{stringliteral}{"{}\(\backslash\)nNode doesn't exist, creating new Node"{}});}
+\DoxyCodeLine{            \textcolor{comment}{// Create a new TreeNode to store these variables}}
+\DoxyCodeLine{            \textcolor{comment}{// Initialize left and right to null initially}}
+\DoxyCodeLine{            \mbox{\hyperlink{struct_tree_node}{TreeNode}} *newTreeNode = (\mbox{\hyperlink{struct_tree_node}{TreeNode}} *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_tree_node}{TreeNode}}));}
+\DoxyCodeLine{            \textcolor{comment}{// Initialize it's value to the character sent}}
+\DoxyCodeLine{            newTreeNode-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}} = *start;}
+\DoxyCodeLine{            \textcolor{comment}{// Initialize left and right subtrees to NULL}}
+\DoxyCodeLine{            newTreeNode-\/>\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}} = NULL;}
+\DoxyCodeLine{            newTreeNode-\/>\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}} = NULL;}
+\DoxyCodeLine{            \textcolor{comment}{// Replace root with the newly created TreeNode}}
+\DoxyCodeLine{            *root = newTreeNode;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{        \textcolor{keywordflow}{else}}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (isalpha(*start))}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                \textcolor{comment}{// Check if it's an alphabet, if it is return it directly}}
+\DoxyCodeLine{                \textcolor{keywordflow}{return} start;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{keywordflow}{if} (*start == \textcolor{charliteral}{'\string~'})}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                \textcolor{comment}{// If the operator is negation}}
+\DoxyCodeLine{                \textcolor{comment}{// We should not go left but rather only go right}}
+\DoxyCodeLine{                \textcolor{comment}{// So we directly go right instead of considering left}}
+\DoxyCodeLine{                currentLocation = \mbox{\hyperlink{_task_8c_a361116e1fb6837a1384c240b3659df98}{convertPreOrderToTree}}(\&(*root)-\/>right, start + 1);}
+\DoxyCodeLine{                \textcolor{keywordflow}{return} currentLocation;}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{            \textcolor{comment}{// Start with the left subtree}}
+\DoxyCodeLine{            currentLocation = \mbox{\hyperlink{_task_8c_a361116e1fb6837a1384c240b3659df98}{convertPreOrderToTree}}(\&(*root)-\/>left, start + 1);}
+\DoxyCodeLine{            \textcolor{comment}{// Start with the right subtree}}
+\DoxyCodeLine{            currentLocation = \mbox{\hyperlink{_task_8c_a361116e1fb6837a1384c240b3659df98}{convertPreOrderToTree}}(\&(*root)-\/>right, currentLocation + 1);}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} currentLocation;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{Task 3\+: Function to traverse through the tree in order}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyItemize}
+\item We know that in order means first
+\item the pointer goes to the left node, then prints the
+\item current node and then goes to the right node again
+\item using simple recursion we get the following function
+\item Make a Global Variable to store the number of alphabets
+\item We are making this because we need
+\item to create an array of inputs and take from user
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_ac0744ec81e8bd93d084359202d422199}{noOfCharacters}} = 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} \mbox{\hyperlink{_task_8c_a313ba20caa46358af4cc9e665ec9b532}{printInOrder}}(\mbox{\hyperlink{struct_tree_node}{TreeNode}} *root)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (root == NULL)}
+\DoxyCodeLine{        \textcolor{keywordflow}{return};}
+\DoxyCodeLine{    \textcolor{comment}{// A new statement to figure out the number of characters}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (isalpha(root-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}}))}
+\DoxyCodeLine{        \mbox{\hyperlink{_task_8c_ac0744ec81e8bd93d084359202d422199}{noOfCharacters}}++;}
+\DoxyCodeLine{    \textcolor{comment}{// Goes to the left sub tree}}
+\DoxyCodeLine{    \mbox{\hyperlink{_task_8c_a313ba20caa46358af4cc9e665ec9b532}{printInOrder}}(root-\/>\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}});}
+\DoxyCodeLine{    \textcolor{comment}{// Prints current value}}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c"{}}, root-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}});}
+\DoxyCodeLine{    \textcolor{comment}{// Goes to the right sub tree}}
+\DoxyCodeLine{    \mbox{\hyperlink{_task_8c_a313ba20caa46358af4cc9e665ec9b532}{printInOrder}}(root-\/>\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysection{Task 4\+: Height of the Parse Tree}\label{md__r_e_a_d_m_e_autotoc_md13}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_a73d0c0208c597205872452be77f669cc}{maxHeightOfParseTree}}(\mbox{\hyperlink{struct_tree_node}{TreeNode}} *root)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (root == NULL)}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} leftSubTreeHeight = \mbox{\hyperlink{_task_8c_a73d0c0208c597205872452be77f669cc}{maxHeightOfParseTree}}(root-\/>\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}});}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} rightSubTreeHeight = \mbox{\hyperlink{_task_8c_a73d0c0208c597205872452be77f669cc}{maxHeightOfParseTree}}(root-\/>\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}});}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \mbox{\hyperlink{_task_8c_a8afd80be6cfb73e36bf48de6a8c1dd6c}{calcMax}}(leftSubTreeHeight, rightSubTreeHeight) + 1;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{Task 5\+: Evaluating the truth value of propositional logic formula in a bottoms up fashion}\label{md__r_e_a_d_m_e_autotoc_md14}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_af8cfe1853f9906165524e57444d88f47}{recursiveTruthEvaluator}}(\textcolor{keywordtype}{char} operation, \mbox{\hyperlink{struct_tree_node}{TreeNode}} *\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}, \mbox{\hyperlink{struct_tree_node}{TreeNode}} *\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{// initializing variables for left sub tree and right sub tree}}
+\DoxyCodeLine{    \textcolor{comment}{// We initialize it to 999 just so that it doesn't mess up by taking initial}}
+\DoxyCodeLine{    \textcolor{comment}{// values as 0}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} leftVal = 999, rightVal = 999;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}} != NULL \&\& operation != \textcolor{charliteral}{'\string~'})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// If left is not alphabet call the function recursively}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (!isalpha(\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}}))}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            leftVal = \mbox{\hyperlink{_task_8c_af8cfe1853f9906165524e57444d88f47}{recursiveTruthEvaluator}}(\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}}, \mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}-\/>\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}, \mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}-\/>\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}} != NULL)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{comment}{// If right is not alphabet call the function recursively}}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (!isalpha(\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}}-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}}))}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            rightVal = \mbox{\hyperlink{_task_8c_af8cfe1853f9906165524e57444d88f47}{recursiveTruthEvaluator}}(\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}}-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}}, \mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}}-\/>\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}, \mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}}-\/>\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}});}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// If Operation is \string~ then we won't have left root}}
+\DoxyCodeLine{    \textcolor{comment}{//  So we don't take left root}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (operation != \textcolor{charliteral}{'\string~'})}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (leftVal != 0 \&\& leftVal != 1)}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            printf(\textcolor{stringliteral}{"{}\(\backslash\)nEnter Truth Value for left branch \%c: "{}}, \mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}});}
+\DoxyCodeLine{            scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&leftVal);}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (rightVal != 0 \&\& rightVal != 1)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        printf(\textcolor{stringliteral}{"{}\(\backslash\)nEnter Truth Value for right branch \%c: "{}}, \mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}}-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}});}
+\DoxyCodeLine{        scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&rightVal);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// if both are alphabets, do the operation}}
+\DoxyCodeLine{    \textcolor{comment}{// Switch case taking care of all the possible operations}}
+\DoxyCodeLine{    \textcolor{keywordflow}{switch} (operation)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} \textcolor{charliteral}{'\string~'}:}
+\DoxyCodeLine{        \textcolor{comment}{// printf("{}\(\backslash\)n::>Performing \string~"{});}}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} !(rightVal);}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} \textcolor{charliteral}{'+'}:}
+\DoxyCodeLine{        \textcolor{comment}{// printf("{}\(\backslash\)n::>Performing +"{});}}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} ((leftVal) | (rightVal));}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} \textcolor{charliteral}{'*'}:}
+\DoxyCodeLine{        \textcolor{comment}{// printf("{}\(\backslash\)n::>Performing *"{});}}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} ((leftVal) \& (rightVal));}
+\DoxyCodeLine{    \textcolor{keywordflow}{case} \textcolor{charliteral}{'>'}:}
+\DoxyCodeLine{        \textcolor{comment}{// printf("{}\(\backslash\)n::>Performing >"{});}}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} ((!(leftVal)) | (rightVal));}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{Task 6}\label{md__r_e_a_d_m_e_autotoc_md15}
+References Used\+: (\href{https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8}{\texttt{ https\+://yuchen52.\+medium.\+com/profiling-\/with-\/gprof-\/64-\/bit-\/window-\/7-\/5e06ef614ba8}})
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} \mbox{\hyperlink{_task_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{// Take input as infix from user}}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}Enter in Infix notation: "{}});}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} inputInfix[\mbox{\hyperlink{_task_8c_a2e1da8593b0244d8e9e3b84ef7b35e73}{max}}];}
+\DoxyCodeLine{    scanf(\textcolor{stringliteral}{"{}\%s"{}}, inputInfix);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{_task_8c_a42c6cde842c5416b53b9a0211894e764}{inFixToPreFix}}(inputInfix);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Create a string for the input 2nd time}}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} inputPrefix[100];}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\(\backslash\)nEnter the string in prefix format: "{}});}
+\DoxyCodeLine{    scanf(\textcolor{stringliteral}{"{}\%s"{}}, inputPrefix);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Create a root to store the structure}}
+\DoxyCodeLine{    \mbox{\hyperlink{struct_tree_node}{TreeNode}} *root = NULL;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Call the function first time}}
+\DoxyCodeLine{    \mbox{\hyperlink{_task_8c_a361116e1fb6837a1384c240b3659df98}{convertPreOrderToTree}}(\&root, inputPrefix);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\(\backslash\)nThe Expression in Inorder Notation is: "{}});}
+\DoxyCodeLine{    \mbox{\hyperlink{_task_8c_a313ba20caa46358af4cc9e665ec9b532}{printInOrder}}(root);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\(\backslash\)nThe height of the parse Tree is: "{}});}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d"{}}, \mbox{\hyperlink{_task_8c_a73d0c0208c597205872452be77f669cc}{maxHeightOfParseTree}}(root));}
+\DoxyCodeLine{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\(\backslash\)nThe number of inputs we need is: \%d"{}}, \mbox{\hyperlink{_task_8c_ac0744ec81e8bd93d084359202d422199}{noOfCharacters}});}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\(\backslash\)n\%d"{}}, \mbox{\hyperlink{_task_8c_af8cfe1853f9906165524e57444d88f47}{recursiveTruthEvaluator}}(root-\/>\mbox{\hyperlink{struct_tree_node_a0f88d66987f307f00e5868889c52df87}{val}}, root-\/>\mbox{\hyperlink{struct_tree_node_a99fb5e0be96ed75527d53c3747f93c2d}{left}}, root-\/>\mbox{\hyperlink{struct_tree_node_a02b3bbe1406cbe1e9f0bc9cc1d5ea247}{right}}));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysection{Running the Code}\label{md__r_e_a_d_m_e_autotoc_md16}
+
+\begin{DoxyItemize}
 \item This was a project made for Logic in CS Course Assignment 1
 \item Compile by using {\ttfamily gcc -\/Wall -\/pg \mbox{\hyperlink{_task_8c}{Task.\+c}} -\/o Task.\+exe}
 \item Then Run the exe
