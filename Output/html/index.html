@@ -113,6 +113,14 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li>Task 4: Height of the Parse Tree</li>
 <li>Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion</li>
 <li>Task 6</li>
+<li>Graphs :)<ul>
+<li>Analysis 1</li>
+<li>Analysis 2</li>
+<li>Analysis 3</li>
+<li>Analysis 4</li>
+<li>Analysis 5</li>
+</ul>
+</li>
 <li>Running the Code</li>
 <li>Basic Git Commands you might want to know to push onto this repository</li>
 </ul>
@@ -498,6 +506,38 @@ Task 6</h1>
 <div class="line">}</div>
 <div class="ttc" id="a_task_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_task_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Takes input from user Creates a string for the input Create a root and call the function which return...</div><div class="ttdef"><b>Definition:</b> Task.c:409</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md16"></a>
+Graphs :)</h1>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Analysis 1</h2>
+<div class="fragment"><div class="line">Function  = (a((b&gt;c)&gt;d)*e)&gt;f</div>
+<div class="line">Inputs - a=0, b=1, c=0, d=0, e=1, f=1</div>
+<div class="line">Result= 1</div>
+</div><!-- fragment --><p> <img src="https://user-images.githubusercontent.com/28446977/196999959-be4f98fa-de75-489d-a5dc-02f830be50f5.png" alt="image" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Analysis 2</h2>
+<div class="fragment"><div class="line">Function  = (a+b+c)*d</div>
+<div class="line">Inputs - a=1, b=0, c=0, d=1</div>
+<div class="line">Result= 1</div>
+</div><!-- fragment --><p> <img src="https://user-images.githubusercontent.com/28446977/196999995-fa88adc7-8d89-4398-bada-4f431b694220.png" alt="image" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Analysis 3</h2>
+<div class="fragment"><div class="line">Function  = ((a+b)&gt;c)&gt;d</div>
+<div class="line">Inputs - a=1, b=0, c=0, d=0</div>
+<div class="line">Result= 1</div>
+</div><!-- fragment --><p> <img src="https://user-images.githubusercontent.com/28446977/197000021-4065bb25-e4f0-4c04-8873-2bafc6676ae2.png" alt="image" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md20"></a>
+Analysis 4</h2>
+<div class="fragment"><div class="line">Function  = ((~a)\*b)&gt;(c+(d\*e))</div>
+<div class="line">Inputs - a=1, b=0, c=0, d=1, e=0</div>
+<div class="line">Result= 1</div>
+</div><!-- fragment --><p> <img src="https://user-images.githubusercontent.com/28446977/196999655-8b4f6085-2bc9-457d-9814-95d018429d5c.png" alt="image" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Analysis 5</h2>
+<div class="fragment"><div class="line">Function  = (a+b+c)*d</div>
+<div class="line">Inputs - a=1, b=0, c=0, d=1</div>
+<div class="line">Result= 1</div>
+</div><!-- fragment --><p> <img src="https://user-images.githubusercontent.com/28446977/197000062-0cf40336-ceee-4f00-af94-b4facc069159.png" alt="image" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md22"></a>
 Running the Code</h1>
 <ul>
 <li>This was a project made for Logic in CS Course Assignment 1</li>
@@ -507,7 +547,7 @@ Running the Code</h1>
 <li><code>gprof Task.exe gmon.out &gt;&gt; analysis.txt</code> Use this to get analysis</li>
 <li>To graph this in points use gprof2dot and graph</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Basic Git Commands you might want to know to push onto this repository</h1>
 <ul>
 <li><code>git pull</code>: to pull from remote</li>

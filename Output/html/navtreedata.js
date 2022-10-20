@@ -42,8 +42,15 @@ var NAVTREE =
       [ "Task 4: Height of the Parse Tree", "index.html#autotoc_md13", null ],
       [ "Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion", "index.html#autotoc_md14", null ],
       [ "Task 6", "index.html#autotoc_md15", null ],
-      [ "Running the Code", "index.html#autotoc_md16", null ],
-      [ "Basic Git Commands you might want to know to push onto this repository", "index.html#autotoc_md17", null ]
+      [ "Graphs :)", "index.html#autotoc_md16", [
+        [ "Analysis 1", "index.html#autotoc_md17", null ],
+        [ "Analysis 2", "index.html#autotoc_md18", null ],
+        [ "Analysis 3", "index.html#autotoc_md19", null ],
+        [ "Analysis 4", "index.html#autotoc_md20", null ],
+        [ "Analysis 5", "index.html#autotoc_md21", null ]
+      ] ],
+      [ "Running the Code", "index.html#autotoc_md22", null ],
+      [ "Basic Git Commands you might want to know to push onto this repository", "index.html#autotoc_md23", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
