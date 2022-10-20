@@ -1,0 +1,37 @@
+digraph "callgraph" {
+  F556586b11210 [label="_IO_file_overflow@@GLIBC_2.2.5\n78 878"];
+  F556586b11660 [label="_IO_doallocbuf\n69 732"];
+  F556586b11f40 [label="_IO_file_xsputn@@GLIBC_2.2.5\n90 946"];
+  F556586b12c00 [label="_IO_default_xsputn\n11 842"];
+  F556586c10110 [label="ptmalloc_init.part.0\n68 154"];
+  F556586c674d0 [label="malloc_hook_ini\n68 779"];
+  F556586cc6290 [label="_IO_file_doallocate\n69 684"];
+  F556586ccb530 [label="(below main)\n100 448"];
+  F556586ccd2b0 [label="main\n100 448"];
+  F556586cd0510 [label="malloc\n69 488"];
+  F556586cd29d0 [label="_dl_addr\n66 416"];
+  F556586cd5750 [label="__vfprintf_internal\n93 557"];
+  F556586cdd5a0 [label="printf\n93 856"];
+  F556586cdf920 [label="0x00000000001090e0\n93 876"];
+  F556586ce14d0 [label="recursiveTruthEvaluator\n7 459"];
+  F556586d0df20 [label="_start\n100 448"];
+  F556586d0eec0 [label="0x0000000004896310\n69 492"];
+  F556586b11210 -> F556586b11660 [weight=2,label="69 732 (1x)"];
+  F556586b11660 -> F556586cc6290 [weight=2,label="69 684 (2x)"];
+  F556586b11f40 -> F556586b11210 [weight=2,label="75 837 (8x)"];
+  F556586b11f40 -> F556586b12c00 [weight=2,label="12 575 (7x)"];
+  F556586b12c00 -> F556586b11210 [weight=2,label="7 462 (219x)"];
+  F556586c10110 -> F556586cd29d0 [weight=2,label="66 416 (1x)"];
+  F556586c674d0 -> F556586c10110 [weight=2,label="68 154 (1x)"];
+  F556586cc6290 -> F556586d0eec0 [weight=2,label="69 492 (2x)"];
+  F556586ccb530 -> F556586ccd2b0 [weight=2,label="100 448 (1x)"];
+  F556586ccd2b0 -> F556586cdf920 [weight=2,label="88 404 (7x)"];
+  F556586ccd2b0 -> F556586ce14d0 [weight=2,label="7 459 (1x)"];
+  F556586cd0510 -> F556586c674d0 [weight=2,label="68 779 (1x)"];
+  F556586cd5750 -> F556586b11f40 [weight=2,label="90 946 (18x)"];
+  F556586cdd5a0 -> F556586cd5750 [weight=2,label="93 557 (10x)"];
+  F556586cdf920 -> F556586cdd5a0 [weight=2,label="93 856 (10x)"];
+  F556586ce14d0 -> F556586cdf920 [weight=2,label="5 472 (2x)"];
+  F556586d0df20 -> F556586ccb530 [weight=2,label="100 448 (1x)"];
+  F556586d0eec0 -> F556586cd0510 [weight=2,label="69 488 (2x)"];
+}
