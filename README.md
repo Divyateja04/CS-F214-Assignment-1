@@ -421,6 +421,22 @@ int main()
 }
 ```
 
+## Graphs :)
+### Analysis 1
+Function  = ((~a)*b)>(c+(d*e))
+Inputs - a=1, b=0, c=0, d=1, e=0
+Result= 1
+![image](https://user-images.githubusercontent.com/28446977/196999959-be4f98fa-de75-489d-a5dc-02f830be50f5.png)
+
+### Analysis 2
+
+![image](https://user-images.githubusercontent.com/28446977/196999995-fa88adc7-8d89-4398-bada-4f431b694220.png)
+![image](https://user-images.githubusercontent.com/28446977/197000021-4065bb25-e4f0-4c04-8873-2bafc6676ae2.png)
+![image](https://user-images.githubusercontent.com/28446977/196999655-8b4f6085-2bc9-457d-9814-95d018429d5c.png)
+![image](https://user-images.githubusercontent.com/28446977/197000062-0cf40336-ceee-4f00-af94-b4facc069159.png)
+
+
+
 ## Running the Code
 - This was a project made for Logic in CS Course Assignment 1
 - Compile by using `gcc -Wall -pg Task.c -o Task.exe`
