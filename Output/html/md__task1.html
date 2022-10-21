@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('md__task1.html',''); initResizable(); 
 <div class="ttc" id="a_task_8c_html_a2b483497092966998b1335924dfa6442"><div class="ttname"><a href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a></div><div class="ttdeci">int priority(char op)</div><div class="ttdoc">Make a if-else function for precedence of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:44</div></div>
 </div><!-- fragment --></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Create a stack to keep track of operators</h2>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> <a class="code hl_variable" href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">stack</a>[<a class="code hl_define" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>];</div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_variable" href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a> = -1;</div>
@@ -145,7 +145,7 @@ Create a stack to keep track of operators</h2>
 <div class="ttc" id="a_task_8c_html_aed34a437ccad598623ff35ce06b759dc"><div class="ttname"><a href="_task_8c.html#aed34a437ccad598623ff35ce06b759dc">stackPop</a></div><div class="ttdeci">char stackPop()</div><div class="ttdoc">Function to pop from the stack. Exception Case where we might have an empty stack.</div><div class="ttdef"><b>Definition:</b> Task.c:81</div></div>
 <div class="ttc" id="a_task_8c_html_aed61586067826b285a214c9643d2c796"><div class="ttname"><a href="_task_8c.html#aed61586067826b285a214c9643d2c796">stackPush</a></div><div class="ttdeci">void stackPush(char val)</div><div class="ttdoc">Function to push onto stack.</div><div class="ttdef"><b>Definition:</b> Task.c:71</div></div>
 <div class="ttc" id="a_task_8c_html_af93f4f37fc2ad9c37af4a715423b110c"><div class="ttname"><a href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a></div><div class="ttdeci">int top</div><div class="ttdef"><b>Definition:</b> Task.c:64</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
 Function to convert Infix to Prefix</h2>
 <p >Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we cannot have 2 same precedence operators together So we have to keep popping and adding into output If we have a closing bracket we have to pop But again through this method we get Postfix so we reverse the string inorder to get the reverse of preorder notation First we replace ( with ) and ) with ( And in the end we reverse again </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a>(<span class="keywordtype">char</span> *input)</div>
 <div class="line">{</div>
