@@ -7,13 +7,13 @@
 - Manan Gupta 2021A7PS2091H
   
 ## Index
-[Task 0](/Task0.md) 
-[Task 1](/Task1.md)
-[Task 2](/Task2.md)
-[Task 3](/Task3.md)
-[Task 4](/Task4.md)
-[Task 5](/Task5.md)
-[Task 6](/Task6.md)
+[Task 0](/md_task0.html) 
+[Task 1](/md_task1.html)
+[Task 2](/md_task2.html)
+[Task 3](/md_task3.html)
+[Task 4](/md_task4.html)
+[Task 5](/md_task5.html)
+[Task 6](/md_task6.html)
 
 ---
 
