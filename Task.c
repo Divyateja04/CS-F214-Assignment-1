@@ -1,7 +1,7 @@
 #include <stdio.h>  // Using for printf, scanf etc.
 #include <stdlib.h> // For malloc, calloc
 #include <string.h> // Only for length of the string
-#include <ctype.h> // Used for isalpha function
+#include <ctype.h>  // Used for isalpha function
 
 /**
  * @brief We chose to use C because of the fact that
@@ -15,7 +15,7 @@
  * @brief Define a constant to take care of max limit of input
  *
  */
-#define max 100
+#define max 100000
 
 /**
  * @brief Creating a structure with left and right leaves
@@ -33,6 +33,29 @@ typedef struct TreeNode
  *
  */
 int calcMax(int a, int b) { return a > b ? a : b; }
+
+/**
+ * @brief Helper Function: To Create an Array as an alternate to using maps
+ *
+ */
+int letters[30];
+
+int returnValueForLetter(char letter)
+{
+    if (letter >= 'a' && letter <= 'z')
+    {
+        int letterNum = (int) letter - 97;
+
+        if(letters[letterNum] == 999){
+            printf("\nEnter value for letter %c: ", letter);
+            int temp;
+            scanf("%d", &temp);
+            letters[letterNum] = temp;
+        }
+
+        return letters[letterNum];
+    }
+}
 
 // Task 1: To convert infix to preorder
 /**
@@ -317,6 +340,7 @@ void printInOrder(TreeNode *root)
  */
 int maxHeightOfParseTree(TreeNode *root)
 {
+    printf(".");
     if (root == NULL)
         return 0;
     int leftSubTreeHeight = maxHeightOfParseTree(root->left);
@@ -364,15 +388,13 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
     {
         if (leftVal != 0 && leftVal != 1)
         {
-            printf("\nEnter Truth Value for left branch %c: ", left->val);
-            scanf("%d", &leftVal);
+            leftVal = returnValueForLetter(left->val);
         }
     }
 
     if (rightVal != 0 && rightVal != 1)
     {
-        printf("\nEnter Truth Value for right branch %c: ", right->val);
-        scanf("%d", &rightVal);
+        rightVal = returnValueForLetter(right->val);
     }
 
     // if both are alphabets, do the operation
@@ -408,8 +430,17 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
  */
 int main()
 {
+
+    // Give default values to all the letters so that it doesn't cause any confusion
+    for (int i = 0; i < 30; i++)
+    {
+        letters[i] = 999;
+    }
+
+    printf("----------------CS F214 Assignment----------------");
+    printf("\nPlease use only small alphabets as atoms :)");
     // Take input as infix from user
-    printf("Enter in Infix notation: ");
+    printf("\nEnter in Infix notation: ");
     char inputInfix[max];
     scanf("%s", inputInfix);
 
@@ -429,6 +460,7 @@ int main()
     printf("\nThe Expression in Inorder Notation is: ");
     printInOrder(root);
 
+    printf("\nCalculating Height of Parse Tree");
     printf("\nThe height of the parse Tree is: ");
     printf("%d", maxHeightOfParseTree(root));
 
