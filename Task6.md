@@ -48,8 +48,16 @@ Result= 1
 ```c
 int main()
 {
+    // Give default values to all the letters so that it doesn't cause any confusion
+    for (int i = 0; i < 30; i++)
+    {
+        letters[i] = 999;
+    }
+
+    printf("----------------CS F214 Assignment----------------");
+    printf("\nPlease use only small alphabets as atoms :)");
     // Take input as infix from user
-    printf("Enter in Infix notation: ");
+    printf("\nEnter in Infix notation: ");
     char inputInfix[max];
     scanf("%s", inputInfix);
 

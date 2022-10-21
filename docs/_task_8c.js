@@ -11,9 +11,11 @@ var _task_8c =
     [ "printInOrder", "_task_8c.html#a313ba20caa46358af4cc9e665ec9b532", null ],
     [ "priority", "_task_8c.html#a2b483497092966998b1335924dfa6442", null ],
     [ "recursiveTruthEvaluator", "_task_8c.html#af8cfe1853f9906165524e57444d88f47", null ],
+    [ "returnValueForLetter", "_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494", null ],
     [ "stackIsEmpty", "_task_8c.html#a328d06e919f031e5305bf079c3b1ec32", null ],
     [ "stackPop", "_task_8c.html#aed34a437ccad598623ff35ce06b759dc", null ],
     [ "stackPush", "_task_8c.html#aed61586067826b285a214c9643d2c796", null ],
+    [ "letters", "_task_8c.html#a2151bd1c2ce92daf32e77205817082c9", null ],
     [ "noOfCharacters", "_task_8c.html#ac0744ec81e8bd93d084359202d422199", null ],
     [ "stack", "_task_8c.html#ae24cff811e071e4fe46eff231506df71", null ],
     [ "top", "_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c", null ]

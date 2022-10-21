@@ -26,3 +26,25 @@ typedef struct TreeNode
 ```c
 int calcMax(int a, int b) { return a > b ? a : b; }
 ```
+
+### @brief Helper Function: To Create an Array as an alternate to using maps
+```c
+int letters[30];
+
+int returnValueForLetter(char letter)
+{
+    if (letter >= 'a' && letter <= 'z')
+    {
+        int letterNum = (int) letter - 97;
+
+        if(letters[letterNum] == 999){
+            printf("\nEnter value for letter %c: ", letter);
+            int temp;
+            scanf("%d", &temp);
+            letters[letterNum] = temp;
+        }
+
+        return letters[letterNum];
+    }
+}
+```

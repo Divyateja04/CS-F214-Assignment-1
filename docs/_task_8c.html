@@ -124,7 +124,7 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>&#160;&#160;&#160;100</td></tr>
+<tr class="memitem:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>&#160;&#160;&#160;100000</td></tr>
 <tr class="memdesc:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">We chose to use C because of the fact that There is no proper implementation in C before this and we thought it would be a good learning experience for us if we use our CP knowledge and put it to use here instead of learning C++ again and shifting to another language.  <a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">More...</a><br /></td></tr>
 <tr class="separator:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -139,6 +139,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a8afd80be6cfb73e36bf48de6a8c1dd6c">calcMax</a> (int a, int b)</td></tr>
 <tr class="memdesc:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper Function: <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max()</a> A function to find the max of 2 numbers.  <a href="_task_8c.html#a8afd80be6cfb73e36bf48de6a8c1dd6c">More...</a><br /></td></tr>
 <tr class="separator:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7077de4bd3e0000ec5bf0f35b6a0a494"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a> (char letter)</td></tr>
+<tr class="separator:a7077de4bd3e0000ec5bf0f35b6a0a494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b483497092966998b1335924dfa6442"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a> (char op)</td></tr>
 <tr class="memdesc:a2b483497092966998b1335924dfa6442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a if-else function for precedence of operators.  <a href="_task_8c.html#a2b483497092966998b1335924dfa6442">More...</a><br /></td></tr>
 <tr class="separator:a2b483497092966998b1335924dfa6442"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +174,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a2151bd1c2ce92daf32e77205817082c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a2151bd1c2ce92daf32e77205817082c9">letters</a> [30]</td></tr>
+<tr class="memdesc:a2151bd1c2ce92daf32e77205817082c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper Function: To Create an Array as an alternate to using maps.  <a href="_task_8c.html#a2151bd1c2ce92daf32e77205817082c9">More...</a><br /></td></tr>
+<tr class="separator:a2151bd1c2ce92daf32e77205817082c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae24cff811e071e4fe46eff231506df71"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">stack</a> [<a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>]</td></tr>
 <tr class="memdesc:ae24cff811e071e4fe46eff231506df71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a stack to keep track of operators.  <a href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">More...</a><br /></td></tr>
 <tr class="separator:ae24cff811e071e4fe46eff231506df71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,7 +193,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define max&#160;&#160;&#160;100</td>
+          <td class="memname">#define max&#160;&#160;&#160;100000</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -455,6 +460,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a7077de4bd3e0000ec5bf0f35b6a0a494" name="a7077de4bd3e0000ec5bf0f35b6a0a494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7077de4bd3e0000ec5bf0f35b6a0a494">&#9670;&#160;</a></span>returnValueForLetter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int returnValueForLetter </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>letter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a328d06e919f031e5305bf079c3b1ec32" name="a328d06e919f031e5305bf079c3b1ec32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a328d06e919f031e5305bf079c3b1ec32">&#9670;&#160;</a></span>stackIsEmpty()</h2>
 
@@ -522,6 +545,22 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a2151bd1c2ce92daf32e77205817082c9" name="a2151bd1c2ce92daf32e77205817082c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2151bd1c2ce92daf32e77205817082c9">&#9670;&#160;</a></span>letters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int letters[30]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper Function: To Create an Array as an alternate to using maps. </p>
+
+</div>
+</div>
 <a id="ac0744ec81e8bd93d084359202d422199" name="ac0744ec81e8bd93d084359202d422199"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0744ec81e8bd93d084359202d422199">&#9670;&#160;</a></span>noOfCharacters</h2>
 

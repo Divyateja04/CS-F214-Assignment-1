@@ -124,15 +124,13 @@ $(document).ready(function(){initNavTree('md__task5.html',''); initResizable(); 
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> (leftVal != 0 &amp;&amp; leftVal != 1)</div>
 <div class="line">        {</div>
-<div class="line">            printf(<span class="stringliteral">&quot;\nEnter Truth Value for left branch %c: &quot;</span>, left-&gt;<a class="code hl_variable" href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">val</a>);</div>
-<div class="line">            scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;leftVal);</div>
+<div class="line">            leftVal = <a class="code hl_function" href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a>(left-&gt;<a class="code hl_variable" href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">val</a>);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (rightVal != 0 &amp;&amp; rightVal != 1)</div>
 <div class="line">    {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;\nEnter Truth Value for right branch %c: &quot;</span>, right-&gt;<a class="code hl_variable" href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">val</a>);</div>
-<div class="line">        scanf(<span class="stringliteral">&quot;%d&quot;</span>, &amp;rightVal);</div>
+<div class="line">        rightVal = <a class="code hl_function" href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a>(right-&gt;<a class="code hl_variable" href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">val</a>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// if both are alphabets, do the operation</span></div>
@@ -153,7 +151,8 @@ $(document).ready(function(){initNavTree('md__task5.html',''); initResizable(); 
 <div class="line">        <span class="keywordflow">return</span> ((!(leftVal)) | (rightVal));</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_af8cfe1853f9906165524e57444d88f47"><div class="ttname"><a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a></div><div class="ttdeci">int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)</div><div class="ttdoc">Evaluating the truth value of propositional logic formula in a bottoms up fashion.</div><div class="ttdef"><b>Definition:</b> Task.c:336</div></div>
+<div class="ttc" id="a_task_8c_html_a7077de4bd3e0000ec5bf0f35b6a0a494"><div class="ttname"><a href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a></div><div class="ttdeci">int returnValueForLetter(char letter)</div><div class="ttdef"><b>Definition:</b> Task.c:43</div></div>
+<div class="ttc" id="a_task_8c_html_af8cfe1853f9906165524e57444d88f47"><div class="ttname"><a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a></div><div class="ttdeci">int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)</div><div class="ttdoc">Evaluating the truth value of propositional logic formula in a bottoms up fashion.</div><div class="ttdef"><b>Definition:</b> Task.c:360</div></div>
 <div class="ttc" id="astruct_tree_node_html"><div class="ttname"><a href="struct_tree_node.html">TreeNode</a></div><div class="ttdoc">Creating a structure with left and right leaves.</div><div class="ttdef"><b>Definition:</b> Task.c:25</div></div>
 <div class="ttc" id="astruct_tree_node_html_a02b3bbe1406cbe1e9f0bc9cc1d5ea247"><div class="ttname"><a href="struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247">TreeNode::right</a></div><div class="ttdeci">struct TreeNode * right</div><div class="ttdef"><b>Definition:</b> Task.c:28</div></div>
 <div class="ttc" id="astruct_tree_node_html_a0f88d66987f307f00e5868889c52df87"><div class="ttname"><a href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">TreeNode::val</a></div><div class="ttdeci">char val</div><div class="ttdef"><b>Definition:</b> Task.c:26</div></div>

@@ -32,15 +32,13 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
     {
         if (leftVal != 0 && leftVal != 1)
         {
-            printf("\nEnter Truth Value for left branch %c: ", left->val);
-            scanf("%d", &leftVal);
+            leftVal = returnValueForLetter(left->val);
         }
     }
 
     if (rightVal != 0 && rightVal != 1)
     {
-        printf("\nEnter Truth Value for right branch %c: ", right->val);
-        scanf("%d", &rightVal);
+        rightVal = returnValueForLetter(right->val);
     }
 
     // if both are alphabets, do the operation
