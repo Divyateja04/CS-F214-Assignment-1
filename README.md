@@ -7,7 +7,7 @@
 - Manan Gupta 2021A7PS2091H
   
 ## Index
-[Task 0](/Task0.md)
+[Task 0](/Task0.md) 
 [Task 1](/Task1.md)
 [Task 2](/Task2.md)
 [Task 3](/Task3.md)
@@ -16,7 +16,6 @@
 [Task 6](/Task6.md)
 
 ---
-
 
 ## Running the Code
 - This was a project made for Logic in CS Course Assignment 1
