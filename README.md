@@ -5,16 +5,6 @@
 - Kumarasamy Chelliah 2021A7PS0096H
 - Harsh Rachalwar 2021A7PS0200H
 - Manan Gupta 2021A7PS2091H
-  
-## Index
-[Task 0](/md_task0.html) 
-[Task 1](/md_task1.html)
-[Task 2](/md_task2.html)
-[Task 3](/md_task3.html)
-[Task 4](/md_task4.html)
-[Task 5](/md_task5.html)
-[Task 6](/md_task6.html)
-
 ---
 
 ## Running the Code
