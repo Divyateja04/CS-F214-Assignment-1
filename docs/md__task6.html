@@ -129,11 +129,20 @@ Analysis 5</h2>
 </div><!-- fragment --><p> <img src="https://user-images.githubusercontent.com/28446977/197000062-0cf40336-ceee-4f00-af94-b4facc069159.png" alt="drawing" width="600" class="inline"/></p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="_task_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line">{</div>
+<div class="line">    <span class="comment">// Declare clock variables to time the code</span></div>
+<div class="line">    clock_t start, end;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// To mark the start time of the program</span></div>
+<div class="line">    start = clock();</div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">// Give default values to all the letters so that it doesn&#39;t cause any confusion</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 30; i++)</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code hl_variable" href="_task_8c.html#a2151bd1c2ce92daf32e77205817082c9">letters</a>[i] = 999;</div>
 <div class="line">    }</div>
+<div class="line">    end = clock();</div>
+<div class="line">    <span class="comment">// To mark end time of the function</span></div>
+<div class="line">    <span class="keywordtype">double</span> t1 = end - start;</div>
 <div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;----------------CS F214 Assignment----------------&quot;</span>);</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\nPlease use only small alphabets as atoms :)&quot;</span>);</div>
@@ -142,12 +151,18 @@ Analysis 5</h2>
 <div class="line">    <span class="keywordtype">char</span> inputInfix[<a class="code hl_define" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>];</div>
 <div class="line">    scanf(<span class="stringliteral">&quot;%s&quot;</span>, inputInfix);</div>
 <div class="line"> </div>
+<div class="line">    start = clock(); <span class="comment">// To mark the start time of the function</span></div>
 <div class="line">    <a class="code hl_function" href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a>(inputInfix);</div>
+<div class="line">    end = clock(); <span class="comment">// To mark the end time of the function</span></div>
+<div class="line">    <span class="keywordtype">double</span> t2 = end - start;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create a string for the input 2nd time</span></div>
 <div class="line">    <span class="keywordtype">char</span> inputPrefix[<a class="code hl_define" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>];</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\nEnter the string in prefix format: &quot;</span>);</div>
 <div class="line">    scanf(<span class="stringliteral">&quot;%s&quot;</span>, inputPrefix);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// To mark the start time of the functions</span></div>
+<div class="line">    start = clock();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create a root to store the structure</span></div>
 <div class="line">    <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a> *root = NULL;</div>
@@ -155,28 +170,38 @@ Analysis 5</h2>
 <div class="line">    <span class="comment">// Call the function first time</span></div>
 <div class="line">    <a class="code hl_function" href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a>(&amp;root, inputPrefix);</div>
 <div class="line"> </div>
+<div class="line">    <span class="comment">// Printing notation in inorder</span></div>
 <div class="line">    printf(<span class="stringliteral">&quot;\nThe Expression in Inorder Notation is: &quot;</span>);</div>
 <div class="line">    <a class="code hl_function" href="_task_8c.html#a313ba20caa46358af4cc9e665ec9b532">printInOrder</a>(root);</div>
 <div class="line"> </div>
+<div class="line">    <span class="comment">// Calculating Height of Parse Tree</span></div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nCalculating Height of Parse Tree&quot;</span>);</div>
 <div class="line">    printf(<span class="stringliteral">&quot;\nThe height of the parse Tree is: &quot;</span>);</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d&quot;</span>, <a class="code hl_function" href="_task_8c.html#a73d0c0208c597205872452be77f669cc">maxHeightOfParseTree</a>(root));</div>
 <div class="line"> </div>
+<div class="line">    end = clock(); <span class="comment">// To mark end time of the functions</span></div>
+<div class="line">    <span class="keywordtype">double</span> t3 = end - start;</div>
+<div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;\nThe number of inputs we need is: %d&quot;</span>, <a class="code hl_variable" href="_task_8c.html#ac0744ec81e8bd93d084359202d422199">noOfCharacters</a>);</div>
-<div class="line">    printf(<span class="stringliteral">&quot;\n%d&quot;</span>, <a class="code hl_function" href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a>(root-&gt;<a class="code hl_variable" href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">val</a>, root-&gt;<a class="code hl_variable" href="struct_tree_node.html#a99fb5e0be96ed75527d53c3747f93c2d">left</a>, root-&gt;<a class="code hl_variable" href="struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247">right</a>));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nThe Truth Value given the above inputs is: %d&quot;</span>, <a class="code hl_function" href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a>(root-&gt;<a class="code hl_variable" href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">val</a>, root-&gt;<a class="code hl_variable" href="struct_tree_node.html#a99fb5e0be96ed75527d53c3747f93c2d">left</a>, root-&gt;<a class="code hl_variable" href="struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247">right</a>));</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Printing out time taken by the program</span></div>
+<div class="line">    <span class="keywordtype">double</span> time_taken = ((double)((t1 + t2 + t3) / CLOCKS_PER_SEC));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\nProgram took %f seconds to execute \n&quot;</span>, time_taken);</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_a2151bd1c2ce92daf32e77205817082c9"><div class="ttname"><a href="_task_8c.html#a2151bd1c2ce92daf32e77205817082c9">letters</a></div><div class="ttdeci">int letters[30]</div><div class="ttdoc">Helper Function: To Create an Array as an alternate to using maps.</div><div class="ttdef"><b>Definition:</b> Task.c:41</div></div>
-<div class="ttc" id="a_task_8c_html_a2e1da8593b0244d8e9e3b84ef7b35e73"><div class="ttname"><a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></div><div class="ttdeci">#define max</div><div class="ttdoc">We chose to use C because of the fact that There is no proper implementation in C before this and we ...</div><div class="ttdef"><b>Definition:</b> Task.c:18</div></div>
-<div class="ttc" id="a_task_8c_html_a313ba20caa46358af4cc9e665ec9b532"><div class="ttname"><a href="_task_8c.html#a313ba20caa46358af4cc9e665ec9b532">printInOrder</a></div><div class="ttdeci">void printInOrder(TreeNode *root)</div><div class="ttdoc">Function to traverse through the tree in order. We know that in order means first the pointer goes to...</div><div class="ttdef"><b>Definition:</b> Task.c:309</div></div>
-<div class="ttc" id="a_task_8c_html_a361116e1fb6837a1384c240b3659df98"><div class="ttname"><a href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a></div><div class="ttdeci">char * convertPreOrderToTree(TreeNode **root, char *start)</div><div class="ttdoc">We observe that from the prefix notation, we can directly get tree If we observe, it starts with an o...</div><div class="ttdef"><b>Definition:</b> Task.c:238</div></div>
-<div class="ttc" id="a_task_8c_html_a42c6cde842c5416b53b9a0211894e764"><div class="ttname"><a href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a></div><div class="ttdeci">void inFixToPreFix(char *input)</div><div class="ttdoc">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we...</div><div class="ttdef"><b>Definition:</b> Task.c:136</div></div>
-<div class="ttc" id="a_task_8c_html_a73d0c0208c597205872452be77f669cc"><div class="ttname"><a href="_task_8c.html#a73d0c0208c597205872452be77f669cc">maxHeightOfParseTree</a></div><div class="ttdeci">int maxHeightOfParseTree(TreeNode *root)</div><div class="ttdoc">We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing l...</div><div class="ttdef"><b>Definition:</b> Task.c:341</div></div>
-<div class="ttc" id="a_task_8c_html_ac0744ec81e8bd93d084359202d422199"><div class="ttname"><a href="_task_8c.html#ac0744ec81e8bd93d084359202d422199">noOfCharacters</a></div><div class="ttdeci">int noOfCharacters</div><div class="ttdef"><b>Definition:</b> Task.c:299</div></div>
-<div class="ttc" id="a_task_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_task_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Takes input from user Creates a string for the input Create a root and call the function which return...</div><div class="ttdef"><b>Definition:</b> Task.c:431</div></div>
-<div class="ttc" id="a_task_8c_html_af8cfe1853f9906165524e57444d88f47"><div class="ttname"><a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a></div><div class="ttdeci">int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)</div><div class="ttdoc">Evaluating the truth value of propositional logic formula in a bottoms up fashion.</div><div class="ttdef"><b>Definition:</b> Task.c:360</div></div>
-<div class="ttc" id="astruct_tree_node_html"><div class="ttname"><a href="struct_tree_node.html">TreeNode</a></div><div class="ttdoc">Creating a structure with left and right leaves.</div><div class="ttdef"><b>Definition:</b> Task.c:25</div></div>
-<div class="ttc" id="astruct_tree_node_html_a02b3bbe1406cbe1e9f0bc9cc1d5ea247"><div class="ttname"><a href="struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247">TreeNode::right</a></div><div class="ttdeci">struct TreeNode * right</div><div class="ttdef"><b>Definition:</b> Task.c:28</div></div>
-<div class="ttc" id="astruct_tree_node_html_a0f88d66987f307f00e5868889c52df87"><div class="ttname"><a href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">TreeNode::val</a></div><div class="ttdeci">char val</div><div class="ttdef"><b>Definition:</b> Task.c:26</div></div>
-<div class="ttc" id="astruct_tree_node_html_a99fb5e0be96ed75527d53c3747f93c2d"><div class="ttname"><a href="struct_tree_node.html#a99fb5e0be96ed75527d53c3747f93c2d">TreeNode::left</a></div><div class="ttdeci">struct TreeNode * left</div><div class="ttdef"><b>Definition:</b> Task.c:27</div></div>
+<div class="ttc" id="a_task_8c_html_a2151bd1c2ce92daf32e77205817082c9"><div class="ttname"><a href="_task_8c.html#a2151bd1c2ce92daf32e77205817082c9">letters</a></div><div class="ttdeci">int letters[30]</div><div class="ttdoc">Helper Function: To Create an Array as an alternate to using maps.</div><div class="ttdef"><b>Definition:</b> Task.c:42</div></div>
+<div class="ttc" id="a_task_8c_html_a2e1da8593b0244d8e9e3b84ef7b35e73"><div class="ttname"><a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></div><div class="ttdeci">#define max</div><div class="ttdoc">We chose to use C because of the fact that There is no proper implementation in C before this and we ...</div><div class="ttdef"><b>Definition:</b> Task.c:19</div></div>
+<div class="ttc" id="a_task_8c_html_a313ba20caa46358af4cc9e665ec9b532"><div class="ttname"><a href="_task_8c.html#a313ba20caa46358af4cc9e665ec9b532">printInOrder</a></div><div class="ttdeci">void printInOrder(TreeNode *root)</div><div class="ttdoc">Function to traverse through the tree in order. We know that in order means first the pointer goes to...</div><div class="ttdef"><b>Definition:</b> Task.c:311</div></div>
+<div class="ttc" id="a_task_8c_html_a361116e1fb6837a1384c240b3659df98"><div class="ttname"><a href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a></div><div class="ttdeci">char * convertPreOrderToTree(TreeNode **root, char *start)</div><div class="ttdoc">We observe that from the prefix notation, we can directly get tree If we observe, it starts with an o...</div><div class="ttdef"><b>Definition:</b> Task.c:240</div></div>
+<div class="ttc" id="a_task_8c_html_a42c6cde842c5416b53b9a0211894e764"><div class="ttname"><a href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a></div><div class="ttdeci">void inFixToPreFix(char *input)</div><div class="ttdoc">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we...</div><div class="ttdef"><b>Definition:</b> Task.c:138</div></div>
+<div class="ttc" id="a_task_8c_html_a73d0c0208c597205872452be77f669cc"><div class="ttname"><a href="_task_8c.html#a73d0c0208c597205872452be77f669cc">maxHeightOfParseTree</a></div><div class="ttdeci">int maxHeightOfParseTree(TreeNode *root)</div><div class="ttdoc">We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing l...</div><div class="ttdef"><b>Definition:</b> Task.c:343</div></div>
+<div class="ttc" id="a_task_8c_html_ac0744ec81e8bd93d084359202d422199"><div class="ttname"><a href="_task_8c.html#ac0744ec81e8bd93d084359202d422199">noOfCharacters</a></div><div class="ttdeci">int noOfCharacters</div><div class="ttdef"><b>Definition:</b> Task.c:301</div></div>
+<div class="ttc" id="a_task_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="_task_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Takes input from user Creates a string for the input Create a root and call the function which return...</div><div class="ttdef"><b>Definition:</b> Task.c:433</div></div>
+<div class="ttc" id="a_task_8c_html_af8cfe1853f9906165524e57444d88f47"><div class="ttname"><a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a></div><div class="ttdeci">int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)</div><div class="ttdoc">Evaluating the truth value of propositional logic formula in a bottoms up fashion.</div><div class="ttdef"><b>Definition:</b> Task.c:362</div></div>
+<div class="ttc" id="astruct_tree_node_html"><div class="ttname"><a href="struct_tree_node.html">TreeNode</a></div><div class="ttdoc">Creating a structure with left and right leaves.</div><div class="ttdef"><b>Definition:</b> Task.c:26</div></div>
+<div class="ttc" id="astruct_tree_node_html_a02b3bbe1406cbe1e9f0bc9cc1d5ea247"><div class="ttname"><a href="struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247">TreeNode::right</a></div><div class="ttdeci">struct TreeNode * right</div><div class="ttdef"><b>Definition:</b> Task.c:29</div></div>
+<div class="ttc" id="astruct_tree_node_html_a0f88d66987f307f00e5868889c52df87"><div class="ttname"><a href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">TreeNode::val</a></div><div class="ttdeci">char val</div><div class="ttdef"><b>Definition:</b> Task.c:27</div></div>
+<div class="ttc" id="astruct_tree_node_html_a99fb5e0be96ed75527d53c3747f93c2d"><div class="ttname"><a href="struct_tree_node.html#a99fb5e0be96ed75527d53c3747f93c2d">TreeNode::left</a></div><div class="ttdeci">struct TreeNode * left</div><div class="ttdef"><b>Definition:</b> Task.c:28</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

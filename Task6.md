@@ -48,11 +48,20 @@ Result= 1
 ```c
 int main()
 {
+    // Declare clock variables to time the code
+    clock_t start, end;
+
+    // To mark the start time of the program
+    start = clock();
+
     // Give default values to all the letters so that it doesn't cause any confusion
     for (int i = 0; i < 30; i++)
     {
         letters[i] = 999;
     }
+    end = clock();
+    // To mark end time of the function
+    double t1 = end - start;
 
     printf("----------------CS F214 Assignment----------------");
     printf("\nPlease use only small alphabets as atoms :)");
@@ -61,12 +70,18 @@ int main()
     char inputInfix[max];
     scanf("%s", inputInfix);
 
+    start = clock(); // To mark the start time of the function
     inFixToPreFix(inputInfix);
+    end = clock(); // To mark the end time of the function
+    double t2 = end - start;
 
     // Create a string for the input 2nd time
     char inputPrefix[max];
     printf("\nEnter the string in prefix format: ");
     scanf("%s", inputPrefix);
+
+    // To mark the start time of the functions
+    start = clock();
 
     // Create a root to store the structure
     TreeNode *root = NULL;
@@ -74,13 +89,23 @@ int main()
     // Call the function first time
     convertPreOrderToTree(&root, inputPrefix);
 
+    // Printing notation in inorder
     printf("\nThe Expression in Inorder Notation is: ");
     printInOrder(root);
 
+    // Calculating Height of Parse Tree
+    printf("\nCalculating Height of Parse Tree");
     printf("\nThe height of the parse Tree is: ");
     printf("%d", maxHeightOfParseTree(root));
 
+    end = clock(); // To mark end time of the functions
+    double t3 = end - start;
+
     printf("\nThe number of inputs we need is: %d", noOfCharacters);
-    printf("\n%d", recursiveTruthEvaluator(root->val, root->left, root->right));
+    printf("\nThe Truth Value given the above inputs is: %d", recursiveTruthEvaluator(root->val, root->left, root->right));
+
+    // Printing out time taken by the program
+    double time_taken = ((double)((t1 + t2 + t3) / CLOCKS_PER_SEC));
+    printf("\nProgram took %f seconds to execute \n", time_taken);
 }
 ```
