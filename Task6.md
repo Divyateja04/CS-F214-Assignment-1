@@ -33,7 +33,7 @@ Result= 1
 
 ### Analysis 4
 ```
-Function  = ((~a)\*b)>(c+(d\*e))
+Function  = ((~a)*b)>(c+(d\*e))
 Inputs - a=1, b=0, c=0, d=1, e=0
 Result= 1
 ```
