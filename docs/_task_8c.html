@@ -155,9 +155,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a328d06e919f031e5305bf079c3b1ec32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a328d06e919f031e5305bf079c3b1ec32">stackIsEmpty</a> ()</td></tr>
 <tr class="memdesc:a328d06e919f031e5305bf079c3b1ec32"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to check if stack is empty or not.  <a href="_task_8c.html#a328d06e919f031e5305bf079c3b1ec32">More...</a><br /></td></tr>
 <tr class="separator:a328d06e919f031e5305bf079c3b1ec32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42c6cde842c5416b53b9a0211894e764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a> (char *input)</td></tr>
-<tr class="memdesc:a42c6cde842c5416b53b9a0211894e764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we cannot have 2 same precedence operators together So we have to keep popping and adding into output If we have a closing bracket we have to pop But again through this method we get Postfix so we reverse the string inorder to get the reverse of preorder notation First we replace ( with ) and ) with ( And in the end we reverse again.  <a href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">More...</a><br /></td></tr>
-<tr class="separator:a42c6cde842c5416b53b9a0211894e764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e688bcec659f9871c626ad8d4a99457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a0e688bcec659f9871c626ad8d4a99457">inFixToPreFix</a> (char *input, char *outputToChar)</td></tr>
+<tr class="memdesc:a0e688bcec659f9871c626ad8d4a99457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we cannot have 2 same precedence operators together So we have to keep popping and adding into output If we have a closing bracket we have to pop But again through this method we get Postfix so we reverse the string inorder to get the reverse of preorder notation First we replace ( with ) and ) with ( And in the end we reverse again.  <a href="_task_8c.html#a0e688bcec659f9871c626ad8d4a99457">More...</a><br /></td></tr>
+<tr class="separator:a0e688bcec659f9871c626ad8d4a99457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a361116e1fb6837a1384c240b3659df98"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a> (<a class="el" href="struct_tree_node.html">TreeNode</a> **root, char *start)</td></tr>
 <tr class="memdesc:a361116e1fb6837a1384c240b3659df98"><td class="mdescLeft">&#160;</td><td class="mdescRight">We observe that from the prefix notation, we can directly get tree If we observe, it starts with an operator and goes on until it gets another operator Let us try if we can get tree from here References : <a href="https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/">https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/</a>.  <a href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">More...</a><br /></td></tr>
 <tr class="separator:a361116e1fb6837a1384c240b3659df98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,8 +291,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a42c6cde842c5416b53b9a0211894e764" name="a42c6cde842c5416b53b9a0211894e764"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42c6cde842c5416b53b9a0211894e764">&#9670;&#160;</a></span>inFixToPreFix()</h2>
+<a id="a0e688bcec659f9871c626ad8d4a99457" name="a0e688bcec659f9871c626ad8d4a99457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e688bcec659f9871c626ad8d4a99457">&#9670;&#160;</a></span>inFixToPreFix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,8 +301,18 @@ Variables</h2></td></tr>
           <td class="memname">void inFixToPreFix </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>outputToChar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -310,7 +320,8 @@ Variables</h2></td></tr>
 <p>Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we cannot have 2 same precedence operators together So we have to keep popping and adding into output If we have a closing bracket we have to pop But again through this method we get Postfix so we reverse the string inorder to get the reverse of preorder notation First we replace ( with ) and ) with ( And in the end we reverse again. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">input</td><td></td></tr>
+    <tr><td class="paramname">input</td><td>for the input string </td></tr>
+    <tr><td class="paramname">outputToChar</td><td>to store the output string </td></tr>
   </table>
   </dd>
 </dl>

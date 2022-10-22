@@ -47,23 +47,28 @@ int stackIsEmpty()
 }
 ```
 
-### Function to convert Infix to Prefix
-    Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
-    Also we cannot have 2 same precedence operators together
-    So we have to keep popping and adding into output
-    If we have a closing bracket we have to pop
-    But again through this method we get Postfix 
-    so we reverse the string inorder to get the reverse of preorder notation
-    First we replace ( with ) and ) with (
-    And in the end we reverse again
+### Infix to Prefix Function
 ```c
-void inFixToPreFix(char *input)
+/**
+ * @brief Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator
+ * Also we cannot have 2 same precedence operators together
+ * So we have to keep popping and adding into output
+ * If we have a closing bracket we have to pop
+ * But again through this method we get Postfix
+ * so we reverse the string inorder to get the reverse of preorder notation
+ * First we replace ( with ) and ) with (
+ * And in the end we reverse again
+ *
+ * @param input for the input string
+ * @param outputToChar to store the output string
+ */
+void inFixToPreFix(char *input, char *outputToChar)
 {
     // Create a Variable to store the output
     char output[max];
     int outputCounter = 0;
- 
-    //Reversing input Step1: Exchange Brackets
+
+    // Reversing input Step1: Exchange Brackets
     for (int i = 0; i < strlen(input); i++)
     {
         if (input[i] == '(')
@@ -142,9 +147,12 @@ void inFixToPreFix(char *input)
     }
 
     printf("Output in PreOrder Notation: ");
+    int k = 0;
     for (int i = outputCounter - 1; i >= 0; i--)
     {
         printf("%c", output[i]);
+        outputToChar[k] = output[i];
+        k++;
     }
 }
 ```

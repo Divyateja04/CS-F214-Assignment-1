@@ -146,14 +146,15 @@ Create a stack to keep track of operators</h2>
 <div class="ttc" id="a_task_8c_html_aed61586067826b285a214c9643d2c796"><div class="ttname"><a href="_task_8c.html#aed61586067826b285a214c9643d2c796">stackPush</a></div><div class="ttdeci">void stackPush(char val)</div><div class="ttdoc">Function to push onto stack.</div><div class="ttdef"><b>Definition:</b> Task.c:96</div></div>
 <div class="ttc" id="a_task_8c_html_af93f4f37fc2ad9c37af4a715423b110c"><div class="ttname"><a href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a></div><div class="ttdeci">int top</div><div class="ttdef"><b>Definition:</b> Task.c:89</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md13"></a>
-Function to convert Infix to Prefix</h2>
-<p >Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we cannot have 2 same precedence operators together So we have to keep popping and adding into output If we have a closing bracket we have to pop But again through this method we get Postfix so we reverse the string inorder to get the reverse of preorder notation First we replace ( with ) and ) with ( And in the end we reverse again </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a>(<span class="keywordtype">char</span> *input)</div>
+Infix to Prefix Function</h2>
+<div class="fragment"><div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="_task_8c.html#a0e688bcec659f9871c626ad8d4a99457">inFixToPreFix</a>(<span class="keywordtype">char</span> *input, <span class="keywordtype">char</span> *outputToChar)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// Create a Variable to store the output</span></div>
 <div class="line">    <span class="keywordtype">char</span> output[<a class="code hl_define" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>];</div>
 <div class="line">    <span class="keywordtype">int</span> outputCounter = 0;</div>
 <div class="line"> </div>
-<div class="line">    <span class="comment">//Reversing input Step1: Exchange Brackets</span></div>
+<div class="line">    <span class="comment">// Reversing input Step1: Exchange Brackets</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; strlen(input); i++)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> (input[i] == <span class="charliteral">&#39;(&#39;</span>)</div>
@@ -232,12 +233,15 @@ Function to convert Infix to Prefix</h2>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    printf(<span class="stringliteral">&quot;Output in PreOrder Notation: &quot;</span>);</div>
+<div class="line">    <span class="keywordtype">int</span> k = 0;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = outputCounter - 1; i &gt;= 0; i--)</div>
 <div class="line">    {</div>
 <div class="line">        printf(<span class="stringliteral">&quot;%c&quot;</span>, output[i]);</div>
+<div class="line">        outputToChar[k] = output[i];</div>
+<div class="line">        k++;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_a42c6cde842c5416b53b9a0211894e764"><div class="ttname"><a href="_task_8c.html#a42c6cde842c5416b53b9a0211894e764">inFixToPreFix</a></div><div class="ttdeci">void inFixToPreFix(char *input)</div><div class="ttdoc">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we...</div><div class="ttdef"><b>Definition:</b> Task.c:138</div></div>
+<div class="ttc" id="a_task_8c_html_a0e688bcec659f9871c626ad8d4a99457"><div class="ttname"><a href="_task_8c.html#a0e688bcec659f9871c626ad8d4a99457">inFixToPreFix</a></div><div class="ttdeci">void inFixToPreFix(char *input, char *outputToChar)</div><div class="ttdoc">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we...</div><div class="ttdef"><b>Definition:</b> Task.c:139</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

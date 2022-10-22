@@ -5,7 +5,7 @@ var _task_8c =
     [ "TreeNode", "_task_8c.html#aba028b9fa75702386100892732a4e800", null ],
     [ "calcMax", "_task_8c.html#a8afd80be6cfb73e36bf48de6a8c1dd6c", null ],
     [ "convertPreOrderToTree", "_task_8c.html#a361116e1fb6837a1384c240b3659df98", null ],
-    [ "inFixToPreFix", "_task_8c.html#a42c6cde842c5416b53b9a0211894e764", null ],
+    [ "inFixToPreFix", "_task_8c.html#a0e688bcec659f9871c626ad8d4a99457", null ],
     [ "main", "_task_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
     [ "maxHeightOfParseTree", "_task_8c.html#a73d0c0208c597205872452be77f669cc", null ],
     [ "printInOrder", "_task_8c.html#a313ba20caa46358af4cc9e665ec9b532", null ],

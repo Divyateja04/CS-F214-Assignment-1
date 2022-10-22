@@ -133,9 +133,10 @@ int stackIsEmpty()
  * First we replace ( with ) and ) with (
  * And in the end we reverse again
  *
- * @param input
+ * @param input for the input string
+ * @param outputToChar to store the output string
  */
-void inFixToPreFix(char *input)
+void inFixToPreFix(char *input, char *outputToChar)
 {
     // Create a Variable to store the output
     char output[max];
@@ -220,9 +221,12 @@ void inFixToPreFix(char *input)
     }
 
     printf("Output in PreOrder Notation: ");
+    int k = 0;
     for (int i = outputCounter - 1; i >= 0; i--)
     {
         printf("%c", output[i]);
+        outputToChar[k] = output[i];
+        k++;
     }
 }
 
@@ -437,7 +441,6 @@ int main()
 
     // To mark the start time of the program
     start = clock();
-
     // Give default values to all the letters so that it doesn't cause any confusion
     for (int i = 0; i < 30; i++)
     {
@@ -449,20 +452,19 @@ int main()
 
     printf("----------------CS F214 Assignment----------------");
     printf("\nPlease use only small alphabets as atoms :)");
+
     // Take input as infix from user
     printf("\nEnter in Infix notation: ");
     char inputInfix[max];
     scanf("%s", inputInfix);
 
-    start = clock(); // To mark the start time of the function
-    inFixToPreFix(inputInfix);
-    end = clock(); // To mark the end time of the function
-    double t2 = end - start;
-
+    // To mark the start time of the function
+    start = clock();
     // Create a string for the input 2nd time
     char inputPrefix[max];
-    printf("\nEnter the string in prefix format: ");
-    scanf("%s", inputPrefix);
+    inFixToPreFix(inputInfix, &inputPrefix);
+    end = clock(); // To mark the end time of the function
+    double t2 = end - start;
 
     // To mark the start time of the functions
     start = clock();

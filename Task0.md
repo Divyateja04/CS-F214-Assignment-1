@@ -9,7 +9,7 @@
 
 ### Define a constant to take care of max limit of input
 ```c
-#define max 100
+#define max 100000
 ```
 
 ### Creating a structure with left and right leaves
@@ -27,7 +27,7 @@ typedef struct TreeNode
 int calcMax(int a, int b) { return a > b ? a : b; }
 ```
 
-### @brief Helper Function: To Create an Array as an alternate to using maps
+### Helper Function: To Create an Array as an alternate to using maps
 ```c
 int letters[30];
 
@@ -48,3 +48,5 @@ int returnValueForLetter(char letter)
     }
 }
 ```
+
+For Proper Code Documentation: [Click Here](_task_8c.html)
