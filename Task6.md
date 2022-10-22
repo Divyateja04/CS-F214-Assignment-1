@@ -64,7 +64,7 @@ int main()
     inFixToPreFix(inputInfix);
 
     // Create a string for the input 2nd time
-    char inputPrefix[100];
+    char inputPrefix[max];
     printf("\nEnter the string in prefix format: ");
     scanf("%s", inputPrefix);
 
