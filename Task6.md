@@ -42,10 +42,11 @@ Result= 1
 
 ### Analysis 5
 ```
-Function  = (a+b+c)*d
-Inputs - a=1, b=0, c=0, d=1
+Function  = (~a)+(b*c)
+Inputs - a=0, b=0, c=0
 Result= 1
 ```
+<img src="https://user-images.githubusercontent.com/28446977/197342283-6ee9f2fb-912f-471a-9728-24721200593b.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/197000062-0cf40336-ceee-4f00-af94-b4facc069159.png" alt="drawing" width="600"/>
 
 ```c
