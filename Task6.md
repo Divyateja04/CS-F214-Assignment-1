@@ -6,7 +6,7 @@ We chose to use C because of the fact that There is no proper implementation in 
 ## Graphs
 ### Analysis 1
 ```
-Function  = (a((b>c)>d)*e)>f
+Function  = (a+((b>c)>d)*e)>f
 Inputs - a=0, b=1, c=0, d=0, e=1, f=1
 Result= 1
 ```
