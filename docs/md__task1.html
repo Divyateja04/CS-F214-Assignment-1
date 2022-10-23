@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('md__task1.html',''); initResizable(); 
 <div class="line">        <span class="keywordflow">return</span> 5;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_af2203c8d92ff1e4f0321eb566de02ffa"><div class="ttname"><a href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a></div><div class="ttdeci">int priority(char operation)</div><div class="ttdoc">Make a if-else function for precedence of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:69</div></div>
+<div class="ttc" id="a_task_8c_html_af2203c8d92ff1e4f0321eb566de02ffa"><div class="ttname"><a href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a></div><div class="ttdeci">int priority(char operation)</div><div class="ttdoc">Make a if-else function for precedence of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:61</div></div>
 </div><!-- fragment --></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md14"></a>
@@ -139,12 +139,12 @@ Create a stack to keep track of operators</h2>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_variable" href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a> == -1;</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_a2e1da8593b0244d8e9e3b84ef7b35e73"><div class="ttname"><a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></div><div class="ttdeci">#define max</div><div class="ttdoc">We chose to use C because of the fact that There is no proper implementation in C before this and we ...</div><div class="ttdef"><b>Definition:</b> Task.c:19</div></div>
-<div class="ttc" id="a_task_8c_html_a328d06e919f031e5305bf079c3b1ec32"><div class="ttname"><a href="_task_8c.html#a328d06e919f031e5305bf079c3b1ec32">stackIsEmpty</a></div><div class="ttdeci">int stackIsEmpty()</div><div class="ttdoc">A function to check if stack is empty or not.</div><div class="ttdef"><b>Definition:</b> Task.c:121</div></div>
-<div class="ttc" id="a_task_8c_html_ae24cff811e071e4fe46eff231506df71"><div class="ttname"><a href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">stack</a></div><div class="ttdeci">char stack[max]</div><div class="ttdoc">Create a stack to keep track of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:88</div></div>
-<div class="ttc" id="a_task_8c_html_aed34a437ccad598623ff35ce06b759dc"><div class="ttname"><a href="_task_8c.html#aed34a437ccad598623ff35ce06b759dc">stackPop</a></div><div class="ttdeci">char stackPop()</div><div class="ttdoc">Function to pop from the stack. Exception Case where we might have an empty stack.</div><div class="ttdef"><b>Definition:</b> Task.c:106</div></div>
-<div class="ttc" id="a_task_8c_html_aed61586067826b285a214c9643d2c796"><div class="ttname"><a href="_task_8c.html#aed61586067826b285a214c9643d2c796">stackPush</a></div><div class="ttdeci">void stackPush(char val)</div><div class="ttdoc">Function to push onto stack.</div><div class="ttdef"><b>Definition:</b> Task.c:96</div></div>
-<div class="ttc" id="a_task_8c_html_af93f4f37fc2ad9c37af4a715423b110c"><div class="ttname"><a href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a></div><div class="ttdeci">int top</div><div class="ttdef"><b>Definition:</b> Task.c:89</div></div>
+<div class="ttc" id="a_task_8c_html_a2e1da8593b0244d8e9e3b84ef7b35e73"><div class="ttname"><a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a></div><div class="ttdeci">#define max</div><div class="ttdoc">Define a constant to take care of max limit of input.</div><div class="ttdef"><b>Definition:</b> Task.c:11</div></div>
+<div class="ttc" id="a_task_8c_html_a328d06e919f031e5305bf079c3b1ec32"><div class="ttname"><a href="_task_8c.html#a328d06e919f031e5305bf079c3b1ec32">stackIsEmpty</a></div><div class="ttdeci">int stackIsEmpty()</div><div class="ttdoc">A function to check if stack is empty or not.</div><div class="ttdef"><b>Definition:</b> Task.c:113</div></div>
+<div class="ttc" id="a_task_8c_html_ae24cff811e071e4fe46eff231506df71"><div class="ttname"><a href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">stack</a></div><div class="ttdeci">char stack[max]</div><div class="ttdoc">Create a stack to keep track of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:80</div></div>
+<div class="ttc" id="a_task_8c_html_aed34a437ccad598623ff35ce06b759dc"><div class="ttname"><a href="_task_8c.html#aed34a437ccad598623ff35ce06b759dc">stackPop</a></div><div class="ttdeci">char stackPop()</div><div class="ttdoc">Function to pop from the stack. Exception Case where we might have an empty stack.</div><div class="ttdef"><b>Definition:</b> Task.c:98</div></div>
+<div class="ttc" id="a_task_8c_html_aed61586067826b285a214c9643d2c796"><div class="ttname"><a href="_task_8c.html#aed61586067826b285a214c9643d2c796">stackPush</a></div><div class="ttdeci">void stackPush(char val)</div><div class="ttdoc">Function to push onto stack.</div><div class="ttdef"><b>Definition:</b> Task.c:88</div></div>
+<div class="ttc" id="a_task_8c_html_af93f4f37fc2ad9c37af4a715423b110c"><div class="ttname"><a href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a></div><div class="ttdeci">int top</div><div class="ttdef"><b>Definition:</b> Task.c:81</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md15"></a>
 Infix to Prefix Function</h2>
 <div class="fragment"><div class="line"> </div>
@@ -241,7 +241,7 @@ Infix to Prefix Function</h2>
 <div class="line">        k++;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_a0e688bcec659f9871c626ad8d4a99457"><div class="ttname"><a href="_task_8c.html#a0e688bcec659f9871c626ad8d4a99457">inFixToPreFix</a></div><div class="ttdeci">void inFixToPreFix(char *input, char *outputToChar)</div><div class="ttdoc">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we...</div><div class="ttdef"><b>Definition:</b> Task.c:139</div></div>
+<div class="ttc" id="a_task_8c_html_a0e688bcec659f9871c626ad8d4a99457"><div class="ttname"><a href="_task_8c.html#a0e688bcec659f9871c626ad8d4a99457">inFixToPreFix</a></div><div class="ttdeci">void inFixToPreFix(char *input, char *outputToChar)</div><div class="ttdoc">Key Rule is We cannot have a lower precedence operator on top of a higher precedence operator Also we...</div><div class="ttdef"><b>Definition:</b> Task.c:131</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

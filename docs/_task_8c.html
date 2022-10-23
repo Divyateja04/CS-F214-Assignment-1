@@ -127,7 +127,7 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">max</a>&#160;&#160;&#160;100000</td></tr>
-<tr class="memdesc:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">We chose to use C because of the fact that There is no proper implementation in C before this and we thought it would be a good learning experience for us if we use our CP knowledge and put it to use here instead of learning C++ again and shifting to another language.  <a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">More...</a><br /></td></tr>
+<tr class="memdesc:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a constant to take care of max limit of input.  <a href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73">More...</a><br /></td></tr>
 <tr class="separator:a2e1da8593b0244d8e9e3b84ef7b35e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -139,7 +139,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a8afd80be6cfb73e36bf48de6a8c1dd6c">calcMax</a> (int a, int b)</td></tr>
-<tr class="memdesc:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper Function: <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max()</a> A function to find the max of 2 numbers.  <a href="_task_8c.html#a8afd80be6cfb73e36bf48de6a8c1dd6c">More...</a><br /></td></tr>
+<tr class="memdesc:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper Function: <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="Define a constant to take care of max limit of input.">max()</a> A function to find the max of 2 numbers.  <a href="_task_8c.html#a8afd80be6cfb73e36bf48de6a8c1dd6c">More...</a><br /></td></tr>
 <tr class="separator:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7077de4bd3e0000ec5bf0f35b6a0a494"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a> (char letter)</td></tr>
 <tr class="separator:a7077de4bd3e0000ec5bf0f35b6a0a494"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,7 +165,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a313ba20caa46358af4cc9e665ec9b532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to traverse through the tree in order. We know that in order means first the pointer goes to the left node, then prints the current node and then goes to the right node again using simple recursion we get the following function.  <a href="_task_8c.html#a313ba20caa46358af4cc9e665ec9b532">More...</a><br /></td></tr>
 <tr class="separator:a313ba20caa46358af4cc9e665ec9b532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d0c0208c597205872452be77f669cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a73d0c0208c597205872452be77f669cc">maxHeightOfParseTree</a> (<a class="el" href="struct_tree_node.html">TreeNode</a> *root)</td></tr>
-<tr class="memdesc:a73d0c0208c597205872452be77f669cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing lower into the tree until we find an end and we take max of this For example, let's say we have 4 3 5 2 6 1 Here we start from 4, then we say that height is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 That extra 1 due to the current node itself When we go to the left node, we get that it is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 again.  <a href="_task_8c.html#a73d0c0208c597205872452be77f669cc">More...</a><br /></td></tr>
+<tr class="memdesc:a73d0c0208c597205872452be77f669cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing lower into the tree until we find an end and we take max of this For example, let's say we have 4 3 5 2 6 1 Here we start from 4, then we say that height is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="Define a constant to take care of max limit of input.">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 That extra 1 due to the current node itself When we go to the left node, we get that it is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="Define a constant to take care of max limit of input.">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 again.  <a href="_task_8c.html#a73d0c0208c597205872452be77f669cc">More...</a><br /></td></tr>
 <tr class="separator:a73d0c0208c597205872452be77f669cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8cfe1853f9906165524e57444d88f47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a> (char operation, <a class="el" href="struct_tree_node.html">TreeNode</a> *left, <a class="el" href="struct_tree_node.html">TreeNode</a> *right)</td></tr>
 <tr class="memdesc:af8cfe1853f9906165524e57444d88f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluating the truth value of propositional logic formula in a bottoms up fashion.  <a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">More...</a><br /></td></tr>
@@ -200,8 +200,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>We chose to use C because of the fact that There is no proper implementation in C before this and we thought it would be a good learning experience for us if we use our CP knowledge and put it to use here instead of learning C++ again and shifting to another language. </p>
-<p >Define a constant to take care of max limit of input </p>
+<p>Define a constant to take care of max limit of input. </p>
 
 </div>
 </div>
@@ -249,7 +248,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Helper Function: <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max()</a> A function to find the max of 2 numbers. </p>
+<p>Helper Function: <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="Define a constant to take care of max limit of input.">max()</a> A function to find the max of 2 numbers. </p>
 
 </div>
 </div>
@@ -364,7 +363,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing lower into the tree until we find an end and we take max of this For example, let's say we have 4 3 5 2 6 1 Here we start from 4, then we say that height is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 That extra 1 due to the current node itself When we go to the left node, we get that it is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 again. </p>
+<p>We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing lower into the tree until we find an end and we take max of this For example, let's say we have 4 3 5 2 6 1 Here we start from 4, then we say that height is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="Define a constant to take care of max limit of input.">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 That extra 1 due to the current node itself When we go to the left node, we get that it is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="Define a constant to take care of max limit of input.">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 again. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">root</td><td>the root of the tree </td></tr>
