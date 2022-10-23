@@ -43,7 +43,8 @@ var NAVTREE =
         [ "Analysis 2", "md__task6.html#autotoc_md23", null ],
         [ "Analysis 3", "md__task6.html#autotoc_md24", null ],
         [ "Analysis 4", "md__task6.html#autotoc_md25", null ],
-        [ "Analysis 5", "md__task6.html#autotoc_md26", null ]
+        [ "Analysis 5", "md__task6.html#autotoc_md26", null ],
+        [ "Analysis 6", "md__task6.html#autotoc_md27", null ]
       ] ]
     ] ],
     [ "Data Structures", "annotated.html", [

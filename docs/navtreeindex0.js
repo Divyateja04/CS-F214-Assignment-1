@@ -48,6 +48,7 @@ var NAVTREEINDEX0 =
 "md__task6.html#autotoc_md24":[7,0,2],
 "md__task6.html#autotoc_md25":[7,0,3],
 "md__task6.html#autotoc_md26":[7,0,4],
+"md__task6.html#autotoc_md27":[7,0,5],
 "pages.html":[],
 "struct_tree_node.html":[8,0,0],
 "struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247":[8,0,0,1],
