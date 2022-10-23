@@ -37,13 +37,13 @@ var NAVTREE =
     [ "Task 3: Function to traverse through the tree in order", "md__task3.html", null ],
     [ "Task 4: Height of the Parse Tree", "md__task4.html", null ],
     [ "Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion", "md__task5.html", null ],
-    [ "Task 6 and Main Function", "md__task6.html", [
-      [ "Graphs", "md__task6.html#autotoc_md20", [
-        [ "Analysis 1", "md__task6.html#autotoc_md21", null ],
-        [ "Analysis 2", "md__task6.html#autotoc_md22", null ],
-        [ "Analysis 3", "md__task6.html#autotoc_md23", null ],
-        [ "Analysis 4", "md__task6.html#autotoc_md24", null ],
-        [ "Analysis 5", "md__task6.html#autotoc_md25", null ]
+    [ "Task 6: Analysis and Graphs", "md__task6.html", [
+      [ "Graphs", "md__task6.html#autotoc_md21", [
+        [ "Analysis 1", "md__task6.html#autotoc_md22", null ],
+        [ "Analysis 2", "md__task6.html#autotoc_md23", null ],
+        [ "Analysis 3", "md__task6.html#autotoc_md24", null ],
+        [ "Analysis 4", "md__task6.html#autotoc_md25", null ],
+        [ "Analysis 5", "md__task6.html#autotoc_md26", null ]
       ] ]
     ] ],
     [ "Data Structures", "annotated.html", [

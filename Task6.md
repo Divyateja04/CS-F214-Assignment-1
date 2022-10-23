@@ -1,4 +1,4 @@
-## Task 6 and Main Function
+## Task 6: Analysis and Graphs
 References Used: (https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8)
 
 We chose to use C because of the fact that we thought, it would be a good learning experience for us if we use our C knowledge, and put it to use here instead of learning C++ again and shifting to another language
@@ -48,80 +48,3 @@ Result= 1
 ```
 <img src="https://user-images.githubusercontent.com/28446977/197342283-6ee9f2fb-912f-471a-9728-24721200593b.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/197000062-0cf40336-ceee-4f00-af94-b4facc069159.png" alt="drawing" width="600"/>
-
-```c
-/**
- * @brief Takes input from user
- * Creates a string for the input
- * Create a root and call the function
- * which returns inorder notation
- *
- * @return int
- */
-int main()
-{
-    // Declare clock variables to time the code
-    clock_t start, end;
-
-    //----------------------------------------------------------------------------------------------------------
-    // To mark the start time of the program
-    start = clock();
-    // Give default values to all the letters so that it doesn't cause any confusion
-    for (int i = 0; i < 30; i++)
-    {
-        letters[i] = 999;
-    }
-    end = clock();
-    // To mark end time of the function
-    double t1 = end - start;
-    //----------------------------------------------------------------------------------------------------------
-
-    //----------------------------------------------------------------------------------------------------------
-    printf("----------------CS F214 Assignment----------------");
-    printf("\nPlease use only small alphabets as atoms :)");
-    //----------------------------------------------------------------------------------------------------------
-
-    //----------------------------------------------------------------------------------------------------------
-    // Take input as infix from user
-    printf("\nEnter in Infix notation: ");
-    char inputInfix[max];
-    scanf("%s", inputInfix);
-    //----------------------------------------------------------------------------------------------------------
-
-    //----------------------------------------------------------------------------------------------------------
-    // To mark the start time of the function
-    start = clock();
-    // Create a string for the input 2nd time
-    char inputPrefix[max];
-    inFixToPreFix(inputInfix, &inputPrefix);
-    end = clock(); // To mark the end time of the function
-    double t2 = end - start;
-    //----------------------------------------------------------------------------------------------------------
-
-    //----------------------------------------------------------------------------------------------------------
-    // To mark the start time of the functions
-    start = clock();
-    // Create a root to store the structure
-    TreeNode *root = NULL;
-    // Call the function first time
-    convertPreOrderToTree(&root, inputPrefix);
-    // Printing notation in inorder
-    printf("\nThe Expression in Inorder Notation is: ");
-    printInOrder(root);
-    // Calculating Height of Parse Tree
-    printf("\nCalculating Height of Parse Tree");
-    printf("\nThe height of the parse Tree is: ");
-    printf("%d", maxHeightOfParseTree(root));
-    end = clock(); // To mark end time of the functions
-    double t3 = end - start;
-    //----------------------------------------------------------------------------------------------------------
-
-    printf("\nThe Truth Value given the above inputs is: %d", recursiveTruthEvaluator(root->val, root->left, root->right));
-
-    //----------------------------------------------------------------------------------------------------------
-    // Printing out time taken by the program
-    double time_taken = ((double)((t1 + t2 + t3) / CLOCKS_PER_SEC));
-    printf("\nProgram took %f seconds to execute \n", time_taken);
-    //----------------------------------------------------------------------------------------------------------
-}
-```

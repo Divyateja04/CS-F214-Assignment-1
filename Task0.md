@@ -51,3 +51,81 @@ int returnValueForLetter(char letter)
 ```
 
 For Proper Code Documentation: Task.c
+
+### Main Function
+```c
+/**
+ * @brief Takes input from user
+ * Creates a string for the input
+ * Create a root and call the function
+ * which returns inorder notation
+ *
+ * @return int
+ */
+int main()
+{
+    // Declare clock variables to time the code
+    clock_t start, end;
+
+    //----------------------------------------------------------------------------------------------------------
+    // To mark the start time of the program
+    start = clock();
+    // Give default values to all the letters so that it doesn't cause any confusion
+    for (int i = 0; i < 30; i++)
+    {
+        letters[i] = 999;
+    }
+    end = clock();
+    // To mark end time of the function
+    double t1 = end - start;
+    //----------------------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------------------
+    printf("----------------CS F214 Assignment----------------");
+    printf("\nPlease use only small alphabets as atoms :)");
+    //----------------------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------------------
+    // Take input as infix from user
+    printf("\nEnter in Infix notation: ");
+    char inputInfix[max];
+    scanf("%s", inputInfix);
+    //----------------------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------------------
+    // To mark the start time of the function
+    start = clock();
+    // Create a string for the input 2nd time
+    char inputPrefix[max];
+    inFixToPreFix(inputInfix, &inputPrefix);
+    end = clock(); // To mark the end time of the function
+    double t2 = end - start;
+    //----------------------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------------------
+    // To mark the start time of the functions
+    start = clock();
+    // Create a root to store the structure
+    TreeNode *root = NULL;
+    // Call the function first time
+    convertPreOrderToTree(&root, inputPrefix);
+    // Printing notation in inorder
+    printf("\nThe Expression in Inorder Notation is: ");
+    printInOrder(root);
+    // Calculating Height of Parse Tree
+    printf("\nCalculating Height of Parse Tree");
+    printf("\nThe height of the parse Tree is: ");
+    printf("%d", maxHeightOfParseTree(root));
+    end = clock(); // To mark end time of the functions
+    double t3 = end - start;
+    //----------------------------------------------------------------------------------------------------------
+
+    printf("\nThe Truth Value given the above inputs is: %d", recursiveTruthEvaluator(root->val, root->left, root->right));
+
+    //----------------------------------------------------------------------------------------------------------
+    // Printing out time taken by the program
+    double time_taken = ((double)((t1 + t2 + t3) / CLOCKS_PER_SEC));
+    printf("\nProgram took %f seconds to execute \n", time_taken);
+    //----------------------------------------------------------------------------------------------------------
+}
+```

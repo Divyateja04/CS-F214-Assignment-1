@@ -6,7 +6,7 @@ var searchData=
   ['task_203_3a_20function_20to_20traverse_20through_20the_20tree_20in_20order_3',['Task 3: Function to traverse through the tree in order',['../md__task3.html',1,'']]],
   ['task_204_3a_20height_20of_20the_20parse_20tree_4',['Task 4: Height of the Parse Tree',['../md__task4.html',1,'']]],
   ['task_205_3a_20evaluating_20the_20truth_20value_20of_20propositional_20logic_20formula_20in_20a_20bottoms_20up_20fashion_5',['Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion',['../md__task5.html',1,'']]],
-  ['task_206_20and_20main_20function_6',['Task 6 and Main Function',['../md__task6.html',1,'']]],
+  ['task_206_3a_20analysis_20and_20graphs_6',['Task 6: Analysis and Graphs',['../md__task6.html',1,'']]],
   ['task_2ec_7',['Task.c',['../_task_8c.html',1,'']]],
   ['task0_2emd_8',['Task0.md',['../_task0_8md.html',1,'']]],
   ['task1_2emd_9',['Task1.md',['../_task1_8md.html',1,'']]],
