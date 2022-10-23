@@ -5,6 +5,13 @@
 #include <time.h>   // Used for time functions
 
 /**
+ * @brief We chose to use C because of the fact that
+ * There is no proper implementation in C before this and we thought
+ * it would be a good learning experience for us if we put our CS F111 knowledge
+ * to use here instead of learning C++ again and shifting to another language
+ */
+
+/**
  * @brief Define a constant to take care of max limit of input
  *
  */
@@ -224,7 +231,7 @@ void inFixToPreFix(char *input, char *outputToChar)
 
 // Task 2: To convert prefix to tree
 /**
- * @brief We observe that from the prefix notation, we can directly get tree
+ * @brief We observe that from the prefix notation, we can directly get the tree
  *  If we observe, it starts with an operator and goes on until it gets another operator
  *  Let us try if we can get tree from here
  *  References : https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
@@ -349,7 +356,7 @@ int maxHeightOfParseTree(TreeNode *root)
 
 // Task 5:
 /**
- * @brief Evaluating the truth value of propositional logic formula in a bottoms up fashion
+ * @brief Evaluating the truth value of propositional logic formula in a bottom up fashion
  *
  * @param operation the operation that is supposed to take place between left and right
  * @param left a reference to the left node of the tree
@@ -365,7 +372,7 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 
     if (left != NULL && operation != '~')
     {
-        // If left is not alphabet call the function recursively
+        // If left is not an alphabet, call the function recursively
         if (!isalpha(left->val))
         {
             leftVal = recursiveTruthEvaluator(left->val, left->left, left->right);
@@ -374,7 +381,7 @@ int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 
     if (right != NULL)
     {
-        // If right is not alphabet call the function recursively
+        // If right is not an alphabet, call the function recursively
         if (!isalpha(right->val))
         {
             rightVal = recursiveTruthEvaluator(right->val, right->left, right->right);
