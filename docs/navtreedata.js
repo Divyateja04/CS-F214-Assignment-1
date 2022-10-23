@@ -27,8 +27,9 @@ var NAVTREE =
   [ "CS F214 Assignment", "index.html", [
     [ "Code Analysis", "index.html", [
       [ "Members", "index.html#autotoc_md1", null ],
-      [ "Running the Code", "index.html#autotoc_md3", null ],
-      [ "Basic Git Commands you might want to know to push onto this repository", "index.html#autotoc_md4", null ]
+      [ "For Code file", "index.html#autotoc_md3", null ],
+      [ "Running the Code", "index.html#autotoc_md4", null ],
+      [ "Basic Git Commands you might want to know to push onto this repository", "index.html#autotoc_md5", null ]
     ] ],
     [ "Task 0: Initializing all the constants and libraries", "md__task0.html", null ],
     [ "Task 1: To convert infix to preorder", "md__task1.html", null ],
@@ -37,12 +38,12 @@ var NAVTREE =
     [ "Task 4: Height of the Parse Tree", "md__task4.html", null ],
     [ "Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion", "md__task5.html", null ],
     [ "Task 6 and Main Function", "md__task6.html", [
-      [ "Graphs", "md__task6.html#autotoc_md19", [
-        [ "Analysis 1", "md__task6.html#autotoc_md20", null ],
-        [ "Analysis 2", "md__task6.html#autotoc_md21", null ],
-        [ "Analysis 3", "md__task6.html#autotoc_md22", null ],
-        [ "Analysis 4", "md__task6.html#autotoc_md23", null ],
-        [ "Analysis 5", "md__task6.html#autotoc_md24", null ]
+      [ "Graphs", "md__task6.html#autotoc_md20", [
+        [ "Analysis 1", "md__task6.html#autotoc_md21", null ],
+        [ "Analysis 2", "md__task6.html#autotoc_md22", null ],
+        [ "Analysis 3", "md__task6.html#autotoc_md23", null ],
+        [ "Analysis 4", "md__task6.html#autotoc_md24", null ],
+        [ "Analysis 5", "md__task6.html#autotoc_md25", null ]
       ] ]
     ] ],
     [ "Data Structures", "annotated.html", [

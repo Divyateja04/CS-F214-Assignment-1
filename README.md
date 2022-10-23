@@ -8,6 +8,9 @@
 
 ---
 
+## For Code file
+Task.c
+
 ## Running the Code
 - This was a project made for Logic in CS Course Assignment 1
 - Compile by using `gcc -Wall -pg Task.c -o Task.exe`
