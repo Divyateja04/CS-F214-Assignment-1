@@ -1,7 +1,7 @@
 ## Task 6 and Main Function
 References Used: (https://yuchen52.medium.com/profiling-with-gprof-64-bit-window-7-5e06ef614ba8)
 
-We chose to use C because of the fact that There is no proper implementation in C before this and we thought, it would be a good learning experience for us if we use our CP knowledge, and put it to use here instead of learning C++ again and shifting to another language
+We chose to use C because of the fact that we thought, it would be a good learning experience for us if we use our C knowledge, and put it to use here instead of learning C++ again and shifting to another language
 
 ## Graphs
 ### Analysis 1
