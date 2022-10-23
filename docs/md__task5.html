@@ -93,7 +93,31 @@ $(document).ready(function(){initNavTree('md__task5.html',''); initResizable(); 
   <div class="headertitle"><div class="title">Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a>(<span class="keywordtype">char</span> operation, <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a> *left, <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a> *right)</div>
+<div class="textblock"><ul>
+<li>Evaluating the truth value of propositional logic formula in a bottoms up fashion</li>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operation</td><td>the operation that is supposed to take place between left and right</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left</td><td>a reference to the left node of the tree</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">right</td><td>a reference to the right node of the tree</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><dl class="section return"><dt>Returns</dt><dd>int returns value 0/1 depending on the previous operation in stack</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a>(<span class="keywordtype">char</span> operation, <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a> *left, <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a> *right)</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">// initializing variables for left sub tree and right sub tree</span></div>
 <div class="line">    <span class="comment">// We initialize it to 999 just so that it doesn&#39;t mess up by taking initial</span></div>
@@ -152,12 +176,14 @@ $(document).ready(function(){initNavTree('md__task5.html',''); initResizable(); 
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="a_task_8c_html_a7077de4bd3e0000ec5bf0f35b6a0a494"><div class="ttname"><a href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a></div><div class="ttdeci">int returnValueForLetter(char letter)</div><div class="ttdef"><b>Definition:</b> Task.c:44</div></div>
-<div class="ttc" id="a_task_8c_html_af8cfe1853f9906165524e57444d88f47"><div class="ttname"><a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a></div><div class="ttdeci">int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)</div><div class="ttdoc">Evaluating the truth value of propositional logic formula in a bottoms up fashion.</div><div class="ttdef"><b>Definition:</b> Task.c:366</div></div>
+<div class="ttc" id="a_task_8c_html_af8cfe1853f9906165524e57444d88f47"><div class="ttname"><a href="_task_8c.html#af8cfe1853f9906165524e57444d88f47">recursiveTruthEvaluator</a></div><div class="ttdeci">int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)</div><div class="ttdoc">Evaluating the truth value of propositional logic formula in a bottoms up fashion.</div><div class="ttdef"><b>Definition:</b> Task.c:367</div></div>
 <div class="ttc" id="astruct_tree_node_html"><div class="ttname"><a href="struct_tree_node.html">TreeNode</a></div><div class="ttdoc">Creating a structure with left and right leaves.</div><div class="ttdef"><b>Definition:</b> Task.c:26</div></div>
 <div class="ttc" id="astruct_tree_node_html_a02b3bbe1406cbe1e9f0bc9cc1d5ea247"><div class="ttname"><a href="struct_tree_node.html#a02b3bbe1406cbe1e9f0bc9cc1d5ea247">TreeNode::right</a></div><div class="ttdeci">struct TreeNode * right</div><div class="ttdef"><b>Definition:</b> Task.c:29</div></div>
 <div class="ttc" id="astruct_tree_node_html_a0f88d66987f307f00e5868889c52df87"><div class="ttname"><a href="struct_tree_node.html#a0f88d66987f307f00e5868889c52df87">TreeNode::val</a></div><div class="ttdeci">char val</div><div class="ttdef"><b>Definition:</b> Task.c:27</div></div>
 <div class="ttc" id="astruct_tree_node_html_a99fb5e0be96ed75527d53c3747f93c2d"><div class="ttname"><a href="struct_tree_node.html#a99fb5e0be96ed75527d53c3747f93c2d">TreeNode::left</a></div><div class="ttdeci">struct TreeNode * left</div><div class="ttdef"><b>Definition:</b> Task.c:28</div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

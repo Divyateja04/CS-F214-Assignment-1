@@ -2,17 +2,17 @@
 - First we make the helper functions as well
 - Make a if-else function for precedence of operators
 ```c
-int priority(char op)
+int priority(char operation)
 {
-    if (op == '(')
+    if (operation == '(')
         return 1;
-    if (op == '~')
+    if (operation == '~')
         return 2;
-    if (op == '*')
+    if (operation == '*')
         return 3;
-    if (op == '+')
+    if (operation == '+')
         return 4;
-    if (op == '>')
+    if (operation == '>')
         return 5;
     return 0;
 }

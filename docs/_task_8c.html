@@ -143,9 +143,9 @@ Functions</h2></td></tr>
 <tr class="separator:a8afd80be6cfb73e36bf48de6a8c1dd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7077de4bd3e0000ec5bf0f35b6a0a494"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494">returnValueForLetter</a> (char letter)</td></tr>
 <tr class="separator:a7077de4bd3e0000ec5bf0f35b6a0a494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b483497092966998b1335924dfa6442"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a> (char op)</td></tr>
-<tr class="memdesc:a2b483497092966998b1335924dfa6442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a if-else function for precedence of operators.  <a href="_task_8c.html#a2b483497092966998b1335924dfa6442">More...</a><br /></td></tr>
-<tr class="separator:a2b483497092966998b1335924dfa6442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2203c8d92ff1e4f0321eb566de02ffa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a> (char operation)</td></tr>
+<tr class="memdesc:af2203c8d92ff1e4f0321eb566de02ffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a if-else function for precedence of operators.  <a href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">More...</a><br /></td></tr>
+<tr class="separator:af2203c8d92ff1e4f0321eb566de02ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed61586067826b285a214c9643d2c796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_task_8c.html#aed61586067826b285a214c9643d2c796">stackPush</a> (char val)</td></tr>
 <tr class="memdesc:aed61586067826b285a214c9643d2c796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to push onto stack.  <a href="_task_8c.html#aed61586067826b285a214c9643d2c796">More...</a><br /></td></tr>
 <tr class="separator:aed61586067826b285a214c9643d2c796"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,8 +282,8 @@ Variables</h2></td></tr>
 <p>We observe that from the prefix notation, we can directly get tree If we observe, it starts with an operator and goes on until it gets another operator Let us try if we can get tree from here References : <a href="https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/">https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">root</td><td></td></tr>
-    <tr><td class="paramname">start</td><td></td></tr>
+    <tr><td class="paramname">root</td><td>pointer to the root where the tree should be stored </td></tr>
+    <tr><td class="paramname">start</td><td>the current character in the prefix notation </td></tr>
   </table>
   </dd>
 </dl>
@@ -367,11 +367,11 @@ Variables</h2></td></tr>
 <p>We need to find max height of tree. We can use Depth First Search for this, i.e. we keep traversing lower into the tree until we find an end and we take max of this For example, let's say we have 4 3 5 2 6 1 Here we start from 4, then we say that height is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 That extra 1 due to the current node itself When we go to the left node, we get that it is <a class="el" href="_task_8c.html#a2e1da8593b0244d8e9e3b84ef7b35e73" title="We chose to use C because of the fact that There is no proper implementation in C before this and we ...">max(leftSubTreeHeight, rightSubTreeHeight)</a> + 1 again. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">root</td><td></td></tr>
+    <tr><td class="paramname">root</td><td>the root of the tree </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int height of the tree </dd></dl>
 
 </div>
 </div>
@@ -401,8 +401,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2b483497092966998b1335924dfa6442" name="a2b483497092966998b1335924dfa6442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b483497092966998b1335924dfa6442">&#9670;&#160;</a></span>priority()</h2>
+<a id="af2203c8d92ff1e4f0321eb566de02ffa" name="af2203c8d92ff1e4f0321eb566de02ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2203c8d92ff1e4f0321eb566de02ffa">&#9670;&#160;</a></span>priority()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +411,7 @@ Variables</h2></td></tr>
           <td class="memname">int priority </td>
           <td>(</td>
           <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>op</em></td><td>)</td>
+          <td class="paramname"><em>operation</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -420,7 +420,7 @@ Variables</h2></td></tr>
 <p>Make a if-else function for precedence of operators. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">op</td><td></td></tr>
+    <tr><td class="paramname">operation</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -463,13 +463,13 @@ Variables</h2></td></tr>
 <p>Evaluating the truth value of propositional logic formula in a bottoms up fashion. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">operation</td><td></td></tr>
-    <tr><td class="paramname">left</td><td></td></tr>
-    <tr><td class="paramname">right</td><td></td></tr>
+    <tr><td class="paramname">operation</td><td>the operation that is supposed to take place between left and right </td></tr>
+    <tr><td class="paramname">left</td><td>a reference to the left node of the tree </td></tr>
+    <tr><td class="paramname">right</td><td>a reference to the right node of the tree </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int returns value 0/1 depending on the previous operation in stack </dd></dl>
 
 </div>
 </div>

@@ -2,6 +2,9 @@
 - We observe that from the prefix notation, we can directly get tree
 - If we observe, it starts with an operator and goes on until it gets another operator
 - Let us try if we can get tree from here
+- @param root pointer to the root where the tree should be stored
+- @param start the current character in the prefix notation
+- @return char*
 - References : https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
 
 ```c
@@ -51,6 +54,7 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
             currentLocation = convertPreOrderToTree(&(*root)->left, start + 1);
             // Start with the right subtree
             currentLocation = convertPreOrderToTree(&(*root)->right, currentLocation + 1);
+            // Current location is used to keep track of location throughout the recursion calls
             return currentLocation;
         }
     }

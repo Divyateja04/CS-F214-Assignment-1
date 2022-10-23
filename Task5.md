@@ -1,4 +1,9 @@
 ## Task 5: Evaluating the truth value of propositional logic formula in a bottoms up fashion
+- Evaluating the truth value of propositional logic formula in a bottoms up fashion
+- @param operation the operation that is supposed to take place between left and right
+- @param left a reference to the left node of the tree
+- @param right a reference to the right node of the tree
+- @return int returns value 0/1 depending on the previous operation in stack
 
 ```c
 int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)

@@ -9,7 +9,7 @@ var _task_8c =
     [ "main", "_task_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4", null ],
     [ "maxHeightOfParseTree", "_task_8c.html#a73d0c0208c597205872452be77f669cc", null ],
     [ "printInOrder", "_task_8c.html#a313ba20caa46358af4cc9e665ec9b532", null ],
-    [ "priority", "_task_8c.html#a2b483497092966998b1335924dfa6442", null ],
+    [ "priority", "_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa", null ],
     [ "recursiveTruthEvaluator", "_task_8c.html#af8cfe1853f9906165524e57444d88f47", null ],
     [ "returnValueForLetter", "_task_8c.html#a7077de4bd3e0000ec5bf0f35b6a0a494", null ],
     [ "stackIsEmpty", "_task_8c.html#a328d06e919f031e5305bf079c3b1ec32", null ],

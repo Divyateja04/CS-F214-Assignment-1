@@ -95,21 +95,21 @@ $(document).ready(function(){initNavTree('md__task1.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><ul>
 <li>First we make the helper functions as well</li>
-<li>Make a if-else function for precedence of operators <div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a>(<span class="keywordtype">char</span> op)</div>
+<li>Make a if-else function for precedence of operators <div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a>(<span class="keywordtype">char</span> operation)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;(&#39;</span>)</div>
+<div class="line">    <span class="keywordflow">if</span> (operation == <span class="charliteral">&#39;(&#39;</span>)</div>
 <div class="line">        <span class="keywordflow">return</span> 1;</div>
-<div class="line">    <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;~&#39;</span>)</div>
+<div class="line">    <span class="keywordflow">if</span> (operation == <span class="charliteral">&#39;~&#39;</span>)</div>
 <div class="line">        <span class="keywordflow">return</span> 2;</div>
-<div class="line">    <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;*&#39;</span>)</div>
+<div class="line">    <span class="keywordflow">if</span> (operation == <span class="charliteral">&#39;*&#39;</span>)</div>
 <div class="line">        <span class="keywordflow">return</span> 3;</div>
-<div class="line">    <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;+&#39;</span>)</div>
+<div class="line">    <span class="keywordflow">if</span> (operation == <span class="charliteral">&#39;+&#39;</span>)</div>
 <div class="line">        <span class="keywordflow">return</span> 4;</div>
-<div class="line">    <span class="keywordflow">if</span> (op == <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line">    <span class="keywordflow">if</span> (operation == <span class="charliteral">&#39;&gt;&#39;</span>)</div>
 <div class="line">        <span class="keywordflow">return</span> 5;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="a_task_8c_html_a2b483497092966998b1335924dfa6442"><div class="ttname"><a href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a></div><div class="ttdeci">int priority(char op)</div><div class="ttdoc">Make a if-else function for precedence of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:69</div></div>
+<div class="ttc" id="a_task_8c_html_af2203c8d92ff1e4f0321eb566de02ffa"><div class="ttname"><a href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a></div><div class="ttdeci">int priority(char operation)</div><div class="ttdoc">Make a if-else function for precedence of operators.</div><div class="ttdef"><b>Definition:</b> Task.c:69</div></div>
 </div><!-- fragment --></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md14"></a>
@@ -199,7 +199,7 @@ Infix to Prefix Function</h2>
 <div class="line">                    <a class="code hl_function" href="_task_8c.html#aed61586067826b285a214c9643d2c796">stackPush</a>(<span class="charliteral">&#39;(&#39;</span>);</div>
 <div class="line">                <span class="comment">// Even though we aren&#39;t actually considering ( for pushing</span></div>
 <div class="line">                <span class="comment">// it matters for the next one coming on to the stack</span></div>
-<div class="line">                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a>(<a class="code hl_variable" href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">stack</a>[<a class="code hl_variable" href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a>]) &gt; <a class="code hl_function" href="_task_8c.html#a2b483497092966998b1335924dfa6442">priority</a>(temp))</div>
+<div class="line">                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a>(<a class="code hl_variable" href="_task_8c.html#ae24cff811e071e4fe46eff231506df71">stack</a>[<a class="code hl_variable" href="_task_8c.html#af93f4f37fc2ad9c37af4a715423b110c">top</a>]) &gt; <a class="code hl_function" href="_task_8c.html#af2203c8d92ff1e4f0321eb566de02ffa">priority</a>(temp))</div>
 <div class="line">                {</div>
 <div class="line">                    <span class="comment">// Basically means priority of element on stack is higher</span></div>
 <div class="line">                    <span class="comment">// Pop the top of the stack and add it to the output</span></div>

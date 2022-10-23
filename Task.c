@@ -63,20 +63,20 @@ int returnValueForLetter(char letter)
 /**
  * @brief Make a if-else function for precedence of operators
  *
- * @param op
+ * @param operation
  * @return int
  */
-int priority(char op)
+int priority(char operation)
 {
-    if (op == '(')
+    if (operation == '(')
         return 1;
-    if (op == '~')
+    if (operation == '~')
         return 2;
-    if (op == '*')
+    if (operation == '*')
         return 3;
-    if (op == '+')
+    if (operation == '+')
         return 4;
-    if (op == '>')
+    if (operation == '>')
         return 5;
     return 0;
 }
@@ -237,8 +237,8 @@ void inFixToPreFix(char *input, char *outputToChar)
  *  Let us try if we can get tree from here
  *  References : https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/
  *
- * @param root
- * @param start
+ * @param root pointer to the root where the tree should be stored
+ * @param start the current character in the prefix notation
  * @return char*
  */
 char *convertPreOrderToTree(TreeNode **root, char *start)
@@ -291,6 +291,7 @@ char *convertPreOrderToTree(TreeNode **root, char *start)
             currentLocation = convertPreOrderToTree(&(*root)->left, start + 1);
             // Start with the right subtree
             currentLocation = convertPreOrderToTree(&(*root)->right, currentLocation + 1);
+            // Current location is used to keep track of location throughout the recursion calls
             return currentLocation;
         }
     }
@@ -341,8 +342,8 @@ void printInOrder(TreeNode *root)
  *  That extra 1 due to the current node itself
  *  When we go to the left node, we get that it is max(leftSubTreeHeight, rightSubTreeHeight) + 1 again
  *
- * @param root
- * @return int
+ * @param root the root of the tree
+ * @return int height of the tree
  */
 int maxHeightOfParseTree(TreeNode *root)
 {
@@ -358,10 +359,10 @@ int maxHeightOfParseTree(TreeNode *root)
 /**
  * @brief Evaluating the truth value of propositional logic formula in a bottoms up fashion
  *
- * @param operation
- * @param left
- * @param right
- * @return int
+ * @param operation the operation that is supposed to take place between left and right
+ * @param left a reference to the left node of the tree
+ * @param right a reference to the right node of the tree
+ * @return int returns value 0/1 depending on the previous operation in stack
  */
 int recursiveTruthEvaluator(char operation, TreeNode *left, TreeNode *right)
 {

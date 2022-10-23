@@ -97,6 +97,22 @@ $(document).ready(function(){initNavTree('md__task2.html',''); initResizable(); 
 <li>We observe that from the prefix notation, we can directly get tree</li>
 <li>If we observe, it starts with an operator and goes on until it gets another operator</li>
 <li>Let us try if we can get tree from here</li>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>pointer to the root where the tree should be stored</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>the current character in the prefix notation</td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+<li><dl class="section return"><dt>Returns</dt><dd>char*</dd></dl>
+</li>
 <li>References : <a href="https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/">https://www.geeksforgeeks.org/building-expression-tree-from-prefix-expression/</a></li>
 </ul>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> *<a class="code hl_function" href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a>(<a class="code hl_struct" href="struct_tree_node.html">TreeNode</a> **root, <span class="keywordtype">char</span> *start)</div>
@@ -145,6 +161,7 @@ $(document).ready(function(){initNavTree('md__task2.html',''); initResizable(); 
 <div class="line">            currentLocation = <a class="code hl_function" href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a>(&amp;(*root)-&gt;left, start + 1);</div>
 <div class="line">            <span class="comment">// Start with the right subtree</span></div>
 <div class="line">            currentLocation = <a class="code hl_function" href="_task_8c.html#a361116e1fb6837a1384c240b3659df98">convertPreOrderToTree</a>(&amp;(*root)-&gt;right, currentLocation + 1);</div>
+<div class="line">            <span class="comment">// Current location is used to keep track of location throughout the recursion calls</span></div>
 <div class="line">            <span class="keywordflow">return</span> currentLocation;</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
