@@ -12,6 +12,7 @@ Result = 1
 ```
 <img src="https://user-images.githubusercontent.com/28446977/197341945-73b54126-d68f-469d-a715-c22293455230.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/196999959-be4f98fa-de75-489d-a5dc-02f830be50f5.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197390808-916b26f6-4089-4c1f-8a60-476d24934679.png" alt="drawing" width="600"/>
 
 ### Analysis 2
 ```
@@ -21,6 +22,7 @@ Result = 1
 ```
 <img src="https://user-images.githubusercontent.com/28446977/197341963-d51e953d-e9dc-4fe6-b88e-3b11270e33be.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/196999995-fa88adc7-8d89-4398-bada-4f431b694220.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197390844-effcf083-49d2-491c-9f75-4c4b7095bd3c.png" alt="drawing" width="600"/>
 
 ### Analysis 3
 ```
@@ -30,6 +32,7 @@ Result = 1
 ```
 <img src="https://user-images.githubusercontent.com/28446977/197341968-af0bc18d-4052-4df8-8960-7b2f069472fa.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/197000021-4065bb25-e4f0-4c04-8873-2bafc6676ae2.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197390870-71d7780d-b4f9-4364-9312-166ace88db85.png" alt="drawing" width="600"/>
 
 ### Analysis 4
 ```
@@ -39,6 +42,7 @@ Result = 1
 ```
 <img src="https://user-images.githubusercontent.com/28446977/197376153-71611387-ec27-468a-b3f4-f22b6817f9fc.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/196999655-8b4f6085-2bc9-457d-9814-95d018429d5c.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197390881-02958286-8583-462e-b18d-e8179dabc924.png" alt="drawing" width="600"/>
 
 ### Analysis 5
 ```
@@ -48,6 +52,7 @@ Result = 1
 ```
 <img src="https://user-images.githubusercontent.com/28446977/197342283-6ee9f2fb-912f-471a-9728-24721200593b.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/197000062-0cf40336-ceee-4f00-af94-b4facc069159.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197390900-0bd9650f-777a-4dcb-878a-72a0daa06b55.png" alt="drawing" width="600"/>
 
 ### Analysis 6
 ```
@@ -59,5 +64,6 @@ Result = 1
 <img src="https://user-images.githubusercontent.com/28446977/197381059-cc52dc7a-aa54-4b7a-a59c-11fa231d4454.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/197381063-db1f7df6-6f78-4928-85b5-c326ebb8ebb0.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/197381116-72c755be-6c84-4824-9b75-2927a2bb3f38.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197390915-16fbf1b1-f250-43d2-9993-164041ec97e5.png" alt="drawing" width="600"/>
 
 
