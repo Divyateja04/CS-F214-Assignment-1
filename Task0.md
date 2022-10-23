@@ -5,6 +5,7 @@
 #include <stdlib.h> // For malloc, calloc
 #include <string.h> // Only for length of the string
 #include <ctype.h> // Used for isalpha function
+#include <time.h>   // Used for time functions
 ```
 
 ### Define a constant to take care of max limit of input

@@ -13,7 +13,7 @@ int priority(char op)
     if (op == '+')
         return 4;
     if (op == '>')
-        return 4;
+        return 5;
     return 0;
 }
 ```
