@@ -5,13 +5,6 @@
 #include <time.h>   // Used for time functions
 
 /**
- * @brief We chose to use C because of the fact that
- * There is no proper implementation in C before this and we thought
- * it would be a good learning experience for us if we put our CS F111 knowledge
- * to use here instead of learning C++ again and shifting to another language
- */
-
-/**
  * @brief Define a constant to take care of max limit of input
  *
  */
