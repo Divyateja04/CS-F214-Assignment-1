@@ -37,7 +37,7 @@ Function  = ((~a)*b)>(c+(d*e))
 Inputs - a=1, b=0, c=0, d=1, e=0
 Result= 1
 ```
-<img src="https://user-images.githubusercontent.com/28446977/197341927-16ac791b-f1be-4f3a-86d2-91d73bac56b4.png" alt="drawing" width="600"/>
+<img src="https://user-images.githubusercontent.com/28446977/197376153-71611387-ec27-468a-b3f4-f22b6817f9fc.png" alt="drawing" width="600"/>
 <img src="https://user-images.githubusercontent.com/28446977/196999655-8b4f6085-2bc9-457d-9814-95d018429d5c.png" alt="drawing" width="600"/>
 
 ### Analysis 5
